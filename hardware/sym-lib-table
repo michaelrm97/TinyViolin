@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name TPS613222ADBVT)(type Legacy)(uri ${KIPRJMOD}/TPS613222ADBVT.lib)(options "")(descr ""))
+  (lib (name RGB_LED)(type Legacy)(uri ${KIPRJMOD}/RGB_LED.lib)(options "")(descr ""))
+  (lib (name 503182-1852)(type Legacy)(uri ${KIPRJMOD}/503182-1852.lib)(options "")(descr ""))
+)
