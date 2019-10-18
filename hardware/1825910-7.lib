@@ -1,0 +1,52 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# 1825910-7
+#
+DEF 1825910-7 S 0 40 Y N 1 L N
+F0 "S" -190 220 50 H V L BNN
+F1 "1825910-7" -200 -290 50 H V L BNN
+F2 "SW_1825910-7" 0 0 50 H I L BNN
+F3 "1825910-7" 0 0 50 H I L BNN
+F4 "None" 0 0 50 H I L BNN
+F5 "50 mA" 0 0 50 H I L BNN
+F6 "https://www.te.com/usa-en/product-1825910-7.html?te_bu=Cor&te_type=disp&te_campaign=seda_glo_cor-seda-global-disp-prtnr-fy19-seda-model-bom-cta_sma-317_1&elqCampaignId=32493" 0 0 50 H I L BNN
+F7 "Switch Tactile OFF _ON_ SPST Round Button PC Pins 0.05A 24VDC 100000Cycle 2.55N Thru-Hole Loose Piece" 0 0 50 H I L BNN
+F8 "Single Pole - Single Throw" 0 0 50 H I L BNN
+F9 "TE Connectivity" 0 0 50 H I L BNN
+F10 "None" 0 0 50 H I L BNN
+F11 "Unavailable" 0 0 50 H I L BNN
+F12 "1825910-7" 0 0 50 H I L BNN
+F13 "Compliant" 0 0 50 H I L BNN
+DRAW
+P 2 0 0 10 -200 200 -200 100 N
+P 2 0 0 10 -200 100 -200 -100 N
+P 2 0 0 10 -200 -100 -200 -200 N
+P 2 0 0 10 -200 -200 200 -200 N
+P 2 0 0 10 200 -200 200 -100 N
+P 2 0 0 10 200 -100 200 100 N
+P 2 0 0 10 200 100 200 200 N
+P 2 0 0 10 200 200 -200 200 N
+P 2 0 0 10 -200 100 -150 100 N
+P 2 0 0 10 -150 100 -150 0 N
+P 2 0 0 10 -150 0 -150 -100 N
+P 2 0 0 10 -150 -100 -200 -100 N
+P 2 0 0 10 200 100 150 100 N
+P 2 0 0 10 150 100 150 0 N
+P 2 0 0 10 150 0 150 -100 N
+P 2 0 0 10 150 -100 200 -100 N
+P 2 0 0 10 -150 0 -50 0 N
+P 2 0 0 10 -50 0 50 50 N
+P 2 0 0 10 50 0 150 0 N
+C -50 0 10 0 0 20 N
+C 50 0 10 0 0 20 N
+X 1 1 -400 100 200 R 40 40 0 0 P 
+X 2 2 -400 -100 200 R 40 40 0 0 P 
+X 3 3 400 100 200 L 40 40 0 0 P 
+X 4 4 400 -100 200 L 40 40 0 0 P 
+ENDDRAW
+ENDDEF
+#
+# End Library

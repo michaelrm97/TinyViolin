@@ -77,83 +77,83 @@ $EndComp
 $Comp
 L power:+5V #PWR?
 U 1 1 5DACB720
-P 5850 2200
-F 0 "#PWR?" H 5850 2050 50  0001 C CNN
-F 1 "+5V" H 5865 2373 50  0000 C CNN
-F 2 "" H 5850 2200 50  0001 C CNN
-F 3 "" H 5850 2200 50  0001 C CNN
-	1    5850 2200
+P 6200 2200
+F 0 "#PWR?" H 6200 2050 50  0001 C CNN
+F 1 "+5V" H 6215 2373 50  0000 C CNN
+F 2 "" H 6200 2200 50  0001 C CNN
+F 3 "" H 6200 2200 50  0001 C CNN
+	1    6200 2200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	5200 1600 5200 2000
-Connection ~ 7850 2200
+Connection ~ 8200 2200
 $Comp
 L power:+3.3V #PWR?
 U 1 1 5DAC00A0
-P 7850 2200
-F 0 "#PWR?" H 7850 2050 50  0001 C CNN
-F 1 "+3.3V" H 7865 2373 50  0000 C CNN
-F 2 "" H 7850 2200 50  0001 C CNN
-F 3 "" H 7850 2200 50  0001 C CNN
-	1    7850 2200
+P 8200 2200
+F 0 "#PWR?" H 8200 2050 50  0001 C CNN
+F 1 "+3.3V" H 8215 2373 50  0000 C CNN
+F 2 "" H 8200 2200 50  0001 C CNN
+F 3 "" H 8200 2200 50  0001 C CNN
+	1    8200 2200
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5DABFCD5
-P 7850 2850
-F 0 "#PWR?" H 7850 2600 50  0001 C CNN
-F 1 "GND" H 7855 2677 50  0000 C CNN
-F 2 "" H 7850 2850 50  0001 C CNN
-F 3 "" H 7850 2850 50  0001 C CNN
-	1    7850 2850
+P 8200 2850
+F 0 "#PWR?" H 8200 2600 50  0001 C CNN
+F 1 "GND" H 8205 2677 50  0000 C CNN
+F 2 "" H 8200 2850 50  0001 C CNN
+F 3 "" H 8200 2850 50  0001 C CNN
+	1    8200 2850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7850 2550 7850 2500
-Connection ~ 7450 2200
+	8200 2550 8200 2500
+Connection ~ 7800 2200
 Wire Wire Line
-	7450 2200 7550 2200
+	7800 2200 7900 2200
 Wire Wire Line
-	7450 2200 7250 2200
+	7800 2200 7600 2200
 Wire Wire Line
-	7450 2250 7450 2200
+	7800 2250 7800 2200
 $Comp
 L power:GND #PWR?
 U 1 1 5DABB9C6
-P 7450 2550
-F 0 "#PWR?" H 7450 2300 50  0001 C CNN
-F 1 "GND" H 7455 2377 50  0000 C CNN
-F 2 "" H 7450 2550 50  0001 C CNN
-F 3 "" H 7450 2550 50  0001 C CNN
-	1    7450 2550
+P 7800 2550
+F 0 "#PWR?" H 7800 2300 50  0001 C CNN
+F 1 "GND" H 7805 2377 50  0000 C CNN
+F 2 "" H 7800 2550 50  0001 C CNN
+F 3 "" H 7800 2550 50  0001 C CNN
+	1    7800 2550
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5DAB9F5C
-P 6850 2600
-F 0 "#PWR?" H 6850 2350 50  0001 C CNN
-F 1 "GND" H 6855 2427 50  0000 C CNN
-F 2 "" H 6850 2600 50  0001 C CNN
-F 3 "" H 6850 2600 50  0001 C CNN
-	1    6850 2600
+P 7200 2600
+F 0 "#PWR?" H 7200 2350 50  0001 C CNN
+F 1 "GND" H 7205 2427 50  0000 C CNN
+F 2 "" H 7200 2600 50  0001 C CNN
+F 3 "" H 7200 2600 50  0001 C CNN
+	1    7200 2600
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5DAB99F6
-P 5850 2550
-F 0 "#PWR?" H 5850 2300 50  0001 C CNN
-F 1 "GND" H 5855 2377 50  0000 C CNN
-F 2 "" H 5850 2550 50  0001 C CNN
-F 3 "" H 5850 2550 50  0001 C CNN
-	1    5850 2550
+P 6200 2550
+F 0 "#PWR?" H 6200 2300 50  0001 C CNN
+F 1 "GND" H 6205 2377 50  0000 C CNN
+F 2 "" H 6200 2550 50  0001 C CNN
+F 3 "" H 6200 2550 50  0001 C CNN
+	1    6200 2550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5850 2250 5850 2200
+	6200 2250 6200 2200
 Connection ~ 5200 1200
 $Comp
 L power:+5V #PWR?
@@ -191,10 +191,10 @@ Wire Wire Line
 Wire Wire Line
 	5200 2000 5050 2000
 Wire Wire Line
-	5200 2250 5200 2000
+	5200 2250 5200 2150
 Connection ~ 5200 2800
 Wire Wire Line
-	5200 2800 5200 2550
+	5200 2800 5200 2700
 Wire Wire Line
 	5050 2800 5200 2800
 $Comp
@@ -254,15 +254,14 @@ $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5DA8E14F
-P 3350 6450
-F 0 "#PWR?" H 3350 6200 50  0001 C CNN
-F 1 "GND" H 3355 6277 50  0000 C CNN
-F 2 "" H 3350 6450 50  0001 C CNN
-F 3 "" H 3350 6450 50  0001 C CNN
-	1    3350 6450
+P 4450 6250
+F 0 "#PWR?" H 4450 6000 50  0001 C CNN
+F 1 "GND" H 4455 6077 50  0000 C CNN
+F 2 "" H 4450 6250 50  0001 C CNN
+F 3 "" H 4450 6250 50  0001 C CNN
+	1    4450 6250
 	1    0    0    -1  
 $EndComp
-Connection ~ 3350 6050
 Wire Wire Line
 	3000 5700 2300 5700
 Wire Wire Line
@@ -469,19 +468,19 @@ LEDS
 Text Label 4250 5000 2    50   ~ 0
 LEDS
 NoConn ~ 8150 5000
-NoConn ~ 8900 2200
-NoConn ~ 8900 2900
-Text Label 8450 2800 2    50   ~ 0
+NoConn ~ 9550 4400
+NoConn ~ 9550 5100
+Text Label 9100 5000 2    50   ~ 0
 MISO
-Text Label 8450 2700 2    50   ~ 0
+Text Label 9100 4900 2    50   ~ 0
 GND
-Text Label 8450 2600 2    50   ~ 0
+Text Label 9100 4800 2    50   ~ 0
 SCK
-Text Label 8450 2500 2    50   ~ 0
+Text Label 9100 4700 2    50   ~ 0
 +3.3V
-Text Label 8450 2300 2    50   ~ 0
+Text Label 9100 4500 2    50   ~ 0
 SS
-Text Label 8450 2400 2    50   ~ 0
+Text Label 9100 4600 2    50   ~ 0
 MOSI
 Wire Wire Line
 	6350 5950 6500 5950
@@ -517,39 +516,39 @@ NoConn ~ 2300 5300
 NoConn ~ 2300 5400
 NoConn ~ 2300 5500
 NoConn ~ 2300 5600
-Connection ~ 5850 2200
-Wire Wire Line
-	6200 2400 6200 2200
 Connection ~ 6200 2200
 Wire Wire Line
-	6200 2200 6050 2200
+	6550 2400 6550 2200
+Connection ~ 6550 2200
 Wire Wire Line
-	6200 2200 6450 2200
+	6550 2200 6400 2200
 Wire Wire Line
-	6200 2400 6450 2400
+	6550 2200 6800 2200
+Wire Wire Line
+	6550 2400 6800 2400
 Connection ~ 1700 2500
 Wire Wire Line
 	1700 2800 1350 2800
 Connection ~ 1700 2800
-Connection ~ 6050 2200
+Connection ~ 6400 2200
 Wire Wire Line
-	6050 2200 5850 2200
-Connection ~ 7550 2200
+	6400 2200 6200 2200
+Connection ~ 7900 2200
 Wire Wire Line
-	7550 2200 7850 2200
+	7900 2200 8200 2200
 Wire Wire Line
-	8450 2300 8500 2300
+	9100 4500 9150 4500
 Wire Wire Line
-	8450 2400 8750 2400
+	9100 4600 9400 4600
 Wire Wire Line
-	8450 2600 8750 2600
-Connection ~ 8500 2300
+	9100 4800 9400 4800
+Connection ~ 9150 4500
 Wire Wire Line
-	8750 2100 8750 2400
-Connection ~ 8750 2400
+	9400 4300 9400 4600
+Connection ~ 9400 4600
 Wire Wire Line
-	8750 3000 8750 2600
-Connection ~ 8750 2600
+	9400 5200 9400 4800
+Connection ~ 9400 4800
 Wire Wire Line
 	4550 5000 4350 5000
 Connection ~ 4350 5000
@@ -565,16 +564,16 @@ Connection ~ 4850 5750
 Wire Wire Line
 	4850 5750 4850 5650
 Wire Wire Line
-	8500 2250 8500 2300
+	9150 4450 9150 4500
 Wire Wire Line
-	8450 2800 8500 2800
+	9100 5000 9150 5000
 Wire Wire Line
-	8500 2800 8500 2850
-Connection ~ 8500 2800
+	9150 5000 9150 5050
+Connection ~ 9150 5000
 Wire Wire Line
-	7550 2150 7550 2200
+	7900 2150 7900 2200
 Wire Wire Line
-	6050 2150 6050 2200
+	6400 2150 6400 2200
 Wire Wire Line
 	1700 2450 1700 2500
 Wire Wire Line
@@ -605,7 +604,8 @@ P 7850 4000
 F 0 "SW6" V 7804 4148 50  0000 L CNN
 F 1 "SW_Push" V 7895 4148 50  0000 L CNN
 F 2 "" H 7850 4200 50  0001 C CNN
-F 3 "~" H 7850 4200 50  0001 C CNN
+F 3 "https://www.ckswitches.com/media/1341/d6.pdf" H 7850 4200 50  0001 C CNN
+F 4 "D6L90 F2 LFS" H 7850 4000 50  0001 C CNN "Part Number"
 	1    7850 4000
 	0    1    1    0   
 $EndComp
@@ -616,7 +616,8 @@ P 6850 4000
 F 0 "SW5" V 6804 4148 50  0000 L CNN
 F 1 "SW_Push" V 6895 4148 50  0000 L CNN
 F 2 "" H 6850 4200 50  0001 C CNN
-F 3 "~" H 6850 4200 50  0001 C CNN
+F 3 "https://www.ckswitches.com/media/1341/d6.pdf" H 6850 4200 50  0001 C CNN
+F 4 "D6L90 F2 LFS" H 6850 4000 50  0001 C CNN "Part Number"
 	1    6850 4000
 	0    1    1    0   
 $EndComp
@@ -627,7 +628,8 @@ P 5850 4000
 F 0 "SW4" V 5804 4148 50  0000 L CNN
 F 1 "SW_Push" V 5895 4148 50  0000 L CNN
 F 2 "" H 5850 4200 50  0001 C CNN
-F 3 "~" H 5850 4200 50  0001 C CNN
+F 3 "https://www.ckswitches.com/media/1341/d6.pdf" H 5850 4200 50  0001 C CNN
+F 4 "D6L90 F2 LFS" H 5850 4000 50  0001 C CNN "Part Number"
 	1    5850 4000
 	0    1    1    0   
 $EndComp
@@ -638,7 +640,8 @@ P 4850 4000
 F 0 "SW3" V 4804 4148 50  0000 L CNN
 F 1 "SW_Push" V 4895 4148 50  0000 L CNN
 F 2 "" H 4850 4200 50  0001 C CNN
-F 3 "~" H 4850 4200 50  0001 C CNN
+F 3 "https://www.ckswitches.com/media/1341/d6.pdf" H 4850 4200 50  0001 C CNN
+F 4 "D6L90 F2 LFS" H 4850 4000 50  0001 C CNN "Part Number"
 	1    4850 4000
 	0    1    1    0   
 $EndComp
@@ -647,7 +650,7 @@ L Device:C C5
 U 1 1 5DA83BC4
 P 5200 2400
 F 0 "C5" H 5315 2446 50  0000 L CNN
-F 1 "2.2uF" H 5315 2355 50  0000 L CNN
+F 1 "22uF" H 5315 2355 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5238 2250 50  0001 C CNN
 F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21B224KBFNNNE.jsp" H 5200 2400 50  0001 C CNN
 F 4 "CL21B224KBFNNNE" H 5200 2400 50  0001 C CNN "Part Number"
@@ -657,56 +660,56 @@ $EndComp
 $Comp
 L Device:R R4
 U 1 1 5DABDF08
-P 7850 2700
-F 0 "R4" H 7920 2746 50  0000 L CNN
-F 1 "220" H 7920 2655 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7780 2700 50  0001 C CNN
-F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 7850 2700 50  0001 C CNN
-F 4 "RMCF0805FT220R" H 7850 2700 50  0001 C CNN "Part Number"
-	1    7850 2700
+P 8200 2700
+F 0 "R4" H 8270 2746 50  0000 L CNN
+F 1 "220" H 8270 2655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8130 2700 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 8200 2700 50  0001 C CNN
+F 4 "RMCF0805FT220R" H 8200 2700 50  0001 C CNN "Part Number"
+	1    8200 2700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:LED D2
 U 1 1 5DABCDE0
-P 7850 2350
-F 0 "D2" V 7889 2233 50  0000 R CNN
-F 1 "LED" V 7798 2233 50  0000 R CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7850 2350 50  0001 C CNN
-F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-2493936/LG%20R971.pdf" H 7850 2350 50  0001 C CNN
-F 4 "LG R971-KN-1	" H 7850 2350 50  0001 C CNN "Part Number"
-	1    7850 2350
+P 8200 2350
+F 0 "D2" V 8239 2233 50  0000 R CNN
+F 1 "LED" V 8148 2233 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8200 2350 50  0001 C CNN
+F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-2493936/LG%20R971.pdf" H 8200 2350 50  0001 C CNN
+F 4 "LG R971-KN-1	" H 8200 2350 50  0001 C CNN "Part Number"
+	1    8200 2350
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C8
+L Device:C C9
 U 1 1 5DABAFC3
-P 7450 2400
-F 0 "C8" H 7565 2446 50  0000 L CNN
-F 1 "1uF" H 7565 2355 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 7488 2250 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2019/06/18/19-CL31F105ZBFNNNE.pdf" H 7450 2400 50  0001 C CNN
-F 4 "CL31F105ZBFNNNE" H 7450 2400 50  0001 C CNN "Part Number"
-	1    7450 2400
+P 7800 2400
+F 0 "C9" H 7915 2446 50  0000 L CNN
+F 1 "1uF" H 7915 2355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 7838 2250 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2019/06/18/19-CL31F105ZBFNNNE.pdf" H 7800 2400 50  0001 C CNN
+F 4 "CL31F105ZBFNNNE" H 7800 2400 50  0001 C CNN "Part Number"
+	1    7800 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C8
+U 1 1 5DAAE01C
+P 6200 2400
+F 0 "C8" H 6315 2446 50  0000 L CNN
+F 1 "1uF" H 6315 2355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6238 2250 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2019/06/18/19-CL31F105ZBFNNNE.pdf" H 6200 2400 50  0001 C CNN
+F 4 "CL31F105ZBFNNNE" H 6200 2400 50  0001 C CNN "Part Number"
+	1    6200 2400
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C7
-U 1 1 5DAAE01C
-P 5850 2400
-F 0 "C7" H 5965 2446 50  0000 L CNN
-F 1 "1uF" H 5965 2355 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 5888 2250 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2019/06/18/19-CL31F105ZBFNNNE.pdf" H 5850 2400 50  0001 C CNN
-F 4 "CL31F105ZBFNNNE" H 5850 2400 50  0001 C CNN "Part Number"
-	1    5850 2400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C6
 U 1 1 5DA94D9F
 P 4800 1200
-F 0 "C6" V 4548 1200 50  0000 C CNN
+F 0 "C7" V 4548 1200 50  0000 C CNN
 F 1 "120pF" V 4639 1200 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4838 1050 50  0001 C CNN
 F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21C121JBANNNC.jsp" H 4800 1200 50  0001 C CNN
@@ -719,7 +722,7 @@ L Device:R R3
 U 1 1 5DA94052
 P 3950 1200
 F 0 "R3" V 3743 1200 50  0000 C CNN
-F 1 "10k" V 3834 1200 50  0000 C CNN
+F 1 "5" V 3834 1200 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3880 1200 50  0001 C CNN
 F 3 "https://www.seielect.com/catalog/sei-rncp.pdf" H 3950 1200 50  0001 C CNN
 F 4 "RNCP0805FTD10K0" H 3950 1200 50  0001 C CNN "Part Number"
@@ -744,8 +747,9 @@ U 1 1 5DA81DE3
 P 3300 2600
 F 0 "L1" V 3490 2600 50  0000 C CNN
 F 1 "2.2uH" V 3399 2600 50  0000 C CNN
-F 2 "" H 3300 2600 50  0001 C CNN
-F 3 "~" H 3300 2600 50  0001 C CNN
+F 2 "Inductor_SMD:L_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3300 2600 50  0001 C CNN
+F 3 "https://search.murata.co.jp/Ceramy/image/img/P02/JELF243B-0013.pdf" H 3300 2600 50  0001 C CNN
+F 4 "LQM31PN2R2M00L" H 3300 2600 50  0001 C CNN "Part Number"
 	1    3300 2600
 	0    -1   -1   0   
 $EndComp
@@ -757,12 +761,7 @@ F 0 "U2" H 4350 3070 50  0000 C CNN
 F 1 "TPS613222ADBVT" H 4350 2979 50  0000 C CNN
 F 2 "SOT95P280X145-5N" H 4350 2400 50  0001 L BNN
 F 3 "http://www.ti.com/lit/ds/symlink/tps61322.pdf" H 4350 2400 50  0001 L BNN
-F 4 "Unavailable" H 4350 2400 50  0001 L BNN "Field4"
-F 5 "TPS613222ADBVT" H 4350 2400 50  0001 L BNN "Field5"
-F 6 "6-uA Quiescent Current, 1.8-A Switch Current Boost Converter 5-SOT-23 -40 to 85" H 4350 2400 50  0001 L BNN "Field6"
-F 7 "Texas Instruments" H 4350 2400 50  0001 L BNN "Field7"
-F 8 "None" H 4350 2400 50  0001 L BNN "Field8"
-F 9 "TPS613222ADBVR" H 4350 2400 50  0001 C CNN "Part Number"
+F 4 "TPS613222ADBVR" H 4350 2400 50  0001 C CNN "Part Number"
 	1    4350 2400
 	1    0    0    -1  
 $EndComp
@@ -773,7 +772,8 @@ P 2600 2500
 F 0 "SW1" H 2600 2785 50  0000 C CNN
 F 1 "SW_SPDT" H 2600 2694 50  0000 C CNN
 F 2 "" H 2600 2500 50  0001 C CNN
-F 3 "~" H 2600 2500 50  0001 C CNN
+F 3 "https://www.nidec-copal-electronics.com/e/catalog/switch/mfs.pdf" H 2600 2500 50  0001 C CNN
+F 4 "MFS101D-8-Z" H 2600 2500 50  0001 C CNN "Part Number"
 	1    2600 2500
 	1    0    0    -1  
 $EndComp
@@ -806,22 +806,12 @@ L Device:R R2
 U 1 1 5DA8D049
 P 3350 5900
 F 0 "R2" H 3420 5946 50  0000 L CNN
-F 1 "5" H 3420 5855 50  0000 L CNN
-F 2 "" V 3280 5900 50  0001 C CNN
-F 3 "~" H 3350 5900 50  0001 C CNN
+F 1 "10k" H 3420 5855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3280 5900 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rncp.pdf" H 3350 5900 50  0001 C CNN
+F 4 "RNCP0805FTD4R70" H 3350 5900 50  0001 C CNN "Part Number"
 	1    3350 5900
 	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW2
-U 1 1 5DA8A56E
-P 3350 6250
-F 0 "SW2" V 3304 6398 50  0000 L CNN
-F 1 "SW_Push" V 3395 6398 50  0000 L CNN
-F 2 "" H 3350 6450 50  0001 C CNN
-F 3 "~" H 3350 6450 50  0001 C CNN
-	1    3350 6250
-	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R1
@@ -829,8 +819,9 @@ U 1 1 5DA87537
 P 2650 4850
 F 0 "R1" H 2720 4896 50  0000 L CNN
 F 1 "1M" H 2720 4805 50  0000 L CNN
-F 2 "" V 2580 4850 50  0001 C CNN
-F 3 "~" H 2650 4850 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2580 4850 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 2650 4850 50  0001 C CNN
+F 4 "RMCF0805FT1M00	" H 2650 4850 50  0001 C CNN "Part Number"
 	1    2650 4850
 	1    0    0    -1  
 $EndComp
@@ -913,7 +904,8 @@ P 4850 5950
 F 0 "RV1" V 4735 5950 50  0000 C CNN
 F 1 "R_POT" V 4644 5950 50  0000 C CNN
 F 2 "" H 4850 5950 50  0001 C CNN
-F 3 "~" H 4850 5950 50  0001 C CNN
+F 3 "https://www.bourns.com/docs/Product-Datasheets/pta.pdf" H 4850 5950 50  0001 C CNN
+F 4 "PTA4543-2015DPB103	" H 4850 5950 50  0001 C CNN "Part Number"
 	1    4850 5950
 	0    -1   -1   0   
 $EndComp
@@ -923,16 +915,17 @@ U 1 1 5DB36837
 P 6700 5950
 F 0 "LS1" H 6870 5946 50  0000 L CNN
 F 1 "Speaker" H 6870 5855 50  0000 L CNN
-F 2 "" H 6700 5750 50  0001 C CNN
-F 3 "~" H 6690 5900 50  0001 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P3.81mm_Drill0.8mm" H 6700 5750 50  0001 C CNN
+F 3 "https://www.soberton.com/wp-content/uploads/2018/07/SP-1605-June-2018.pdf" H 6690 5900 50  0001 C CNN
+F 4 "SP-1605" H 6700 5950 50  0001 C CNN "Part Number"
 	1    6700 5950
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C9
+L Device:C C10
 U 1 1 5DB3816F
 P 6200 5950
-F 0 "C9" V 5948 5950 50  0000 C CNN
+F 0 "C10" V 5948 5950 50  0000 C CNN
 F 1 "100uF" V 6039 5950 50  0000 C CNN
 F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 6238 5800 50  0001 C CNN
 F 3 "http://industrial.panasonic.com/www-cgi/jvcr13pz.cgi?E+PZ+3+ABA0015+ECEA0JKS101+7+WW" H 6200 5950 50  0001 C CNN
@@ -943,13 +936,13 @@ $EndComp
 $Comp
 L Regulator_Linear:MIC5504-3.3YM5 U3
 U 1 1 5DAAF7D5
-P 6850 2300
-F 0 "U3" H 6850 2667 50  0000 C CNN
-F 1 "MIC5504-3.3YM5" H 6850 2576 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 6850 1900 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/MIC550X.pdf" H 6600 2550 50  0001 C CNN
-F 4 "MIC5504-3.3YM5-TR" H 6850 2300 50  0001 C CNN "Part Number"
-	1    6850 2300
+P 7200 2300
+F 0 "U3" H 7200 2667 50  0000 C CNN
+F 1 "MIC5504-3.3YM5" H 7200 2576 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 7200 1900 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/MIC550X.pdf" H 6950 2550 50  0001 C CNN
+F 4 "MIC5504-3.3YM5-TR" H 7200 2300 50  0001 C CNN "Part Number"
+	1    7200 2300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -979,73 +972,73 @@ $EndComp
 $Comp
 L Connector:TestPoint TP3
 U 1 1 5DB589D8
-P 6050 2150
-F 0 "TP3" H 6108 2268 50  0000 L CNN
-F 1 "5V" H 6108 2177 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 6250 2150 50  0001 C CNN
-F 3 "~" H 6250 2150 50  0001 C CNN
-F 4 "~" H 6050 2150 50  0001 C CNN "Part Number"
-	1    6050 2150
+P 6400 2150
+F 0 "TP3" H 6458 2268 50  0000 L CNN
+F 1 "5V" H 6458 2177 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 6600 2150 50  0001 C CNN
+F 3 "~" H 6600 2150 50  0001 C CNN
+F 4 "~" H 6400 2150 50  0001 C CNN "Part Number"
+	1    6400 2150
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:TestPoint TP4
 U 1 1 5DB58E96
-P 7550 2150
-F 0 "TP4" H 7608 2268 50  0000 L CNN
-F 1 "3.3V" H 7608 2177 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 7750 2150 50  0001 C CNN
-F 3 "~" H 7750 2150 50  0001 C CNN
-F 4 "~" H 7550 2150 50  0001 C CNN "Part Number"
-	1    7550 2150
+P 7900 2150
+F 0 "TP4" H 7958 2268 50  0000 L CNN
+F 1 "3.3V" H 7958 2177 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 8100 2150 50  0001 C CNN
+F 3 "~" H 8100 2150 50  0001 C CNN
+F 4 "~" H 7900 2150 50  0001 C CNN "Part Number"
+	1    7900 2150
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:TestPoint TP5
 U 1 1 5DB65B13
-P 8500 2250
-F 0 "TP5" H 8558 2368 50  0000 L CNN
-F 1 "SS" H 8558 2277 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 8700 2250 50  0001 C CNN
-F 3 "~" H 8700 2250 50  0001 C CNN
-F 4 "~" H 8500 2250 50  0001 C CNN "Part Number"
-	1    8500 2250
+P 9150 4450
+F 0 "TP5" H 9208 4568 50  0000 L CNN
+F 1 "SS" H 9208 4477 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 9350 4450 50  0001 C CNN
+F 3 "~" H 9350 4450 50  0001 C CNN
+F 4 "~" H 9150 4450 50  0001 C CNN "Part Number"
+	1    9150 4450
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:TestPoint TP6
 U 1 1 5DB66225
-P 8750 2100
-F 0 "TP6" H 8808 2218 50  0000 L CNN
-F 1 "MOSI" H 8808 2127 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 8950 2100 50  0001 C CNN
-F 3 "~" H 8950 2100 50  0001 C CNN
-F 4 "~" H 8750 2100 50  0001 C CNN "Part Number"
-	1    8750 2100
+P 9400 4300
+F 0 "TP6" H 9458 4418 50  0000 L CNN
+F 1 "MOSI" H 9458 4327 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 9600 4300 50  0001 C CNN
+F 3 "~" H 9600 4300 50  0001 C CNN
+F 4 "~" H 9400 4300 50  0001 C CNN "Part Number"
+	1    9400 4300
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:TestPoint TP7
 U 1 1 5DB67BA8
-P 8500 2850
-F 0 "TP7" H 8442 2876 50  0000 R CNN
-F 1 "MISO" H 8442 2967 50  0000 R CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 8700 2850 50  0001 C CNN
-F 3 "~" H 8700 2850 50  0001 C CNN
-F 4 "~" H 8500 2850 50  0001 C CNN "Part Number"
-	1    8500 2850
+P 9150 5050
+F 0 "TP7" H 9092 5076 50  0000 R CNN
+F 1 "MISO" H 9092 5167 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 9350 5050 50  0001 C CNN
+F 3 "~" H 9350 5050 50  0001 C CNN
+F 4 "~" H 9150 5050 50  0001 C CNN "Part Number"
+	1    9150 5050
 	-1   0    0    1   
 $EndComp
 $Comp
 L Connector:TestPoint TP8
 U 1 1 5DB6883D
-P 8750 3000
-F 0 "TP8" H 8692 3026 50  0000 R CNN
-F 1 "SCK" H 8692 3117 50  0000 R CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 8950 3000 50  0001 C CNN
-F 3 "~" H 8950 3000 50  0001 C CNN
-F 4 "~" H 8750 3000 50  0001 C CNN "Part Number"
-	1    8750 3000
+P 9400 5200
+F 0 "TP8" H 9342 5226 50  0000 R CNN
+F 1 "SCK" H 9342 5317 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 9600 5200 50  0001 C CNN
+F 3 "~" H 9600 5200 50  0001 C CNN
+F 4 "~" H 9400 5200 50  0001 C CNN "Part Number"
+	1    9400 5200
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -1147,39 +1140,34 @@ $EndComp
 $Comp
 L 503182-1852:503182-1852 J2
 U 1 1 5DBBD4B3
-P 9350 2800
-F 0 "J2" H 9880 2846 50  0000 L CNN
-F 1 "503182-1852" H 9880 2755 50  0000 L CNN
-F 2 "MOLEX_503182-1852" H 9350 2800 50  0001 L BNN
-F 3 "https://www.molex.com/pdm_docs/sd/5031821852_sd.pdf" H 9350 2800 50  0001 L BNN
-F 4 "WM12834CT-ND" H 9350 2800 50  0001 L BNN "Field4"
-F 5 "5031821852" H 9350 2800 50  0001 L BNN "Field5"
-F 6 "https://www.digikey.com/product-detail/en/molex/5031821852/WM12834CT-ND/5823232?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" H 9350 2800 50  0001 L BNN "Field6"
-F 7 "MICRO SD NORMAL ULTRALOWPRO8CKTE" H 9350 2800 50  0001 L BNN "Field7"
-F 8 "Molex" H 9350 2800 50  0001 L BNN "Field8"
-F 9 "5031821852" H 9350 2800 50  0001 C CNN "Part Number"
-	1    9350 2800
+P 10000 5000
+F 0 "J2" H 10530 5046 50  0000 L CNN
+F 1 "503182-1852" H 10530 4955 50  0000 L CNN
+F 2 "MOLEX_503182-1852" H 10000 5000 50  0001 L BNN
+F 3 "https://www.molex.com/pdm_docs/sd/5031821852_sd.pdf" H 10000 5000 50  0001 L BNN
+F 4 "5031821852" H 10000 5000 50  0001 C CNN "Part Number"
+	1    10000 5000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8900 2200 9150 2200
+	9550 4400 9800 4400
 Wire Wire Line
-	8500 2300 9150 2300
+	9150 4500 9800 4500
 Wire Wire Line
-	8750 2400 9150 2400
+	9400 4600 9800 4600
 Wire Wire Line
-	8450 2500 9150 2500
+	9100 4700 9800 4700
 Wire Wire Line
-	8750 2600 9150 2600
+	9400 4800 9800 4800
 Wire Wire Line
-	8450 2700 9150 2700
+	9100 4900 9800 4900
 Wire Wire Line
-	8500 2800 9150 2800
+	9150 5000 9800 5000
 Wire Wire Line
-	8900 2900 9150 2900
-NoConn ~ 9150 3100
-NoConn ~ 9150 3200
-NoConn ~ 9150 3400
+	9550 5100 9800 5100
+NoConn ~ 9800 5300
+NoConn ~ 9800 5400
+NoConn ~ 9800 5600
 $Comp
 L power:+5V #PWR?
 U 1 1 5DA91E7E
@@ -1224,4 +1212,51 @@ F 3 "" H 7850 4700 50  0001 C CNN
 	1    7850 4700
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:C C6
+U 1 1 5DAA8B78
+P 5650 2400
+F 0 "C6" H 5765 2446 50  0000 L CNN
+F 1 "22uF" H 5765 2355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5688 2250 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21B224KBFNNNE.jsp" H 5650 2400 50  0001 C CNN
+F 4 "CL21B224KBFNNNE" H 5650 2400 50  0001 C CNN "Part Number"
+	1    5650 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 2250 5650 2150
+Wire Wire Line
+	5650 2150 5200 2150
+Connection ~ 5200 2150
+Wire Wire Line
+	5200 2150 5200 2000
+Wire Wire Line
+	5650 2550 5650 2700
+Wire Wire Line
+	5650 2700 5200 2700
+Connection ~ 5200 2700
+Wire Wire Line
+	5200 2700 5200 2550
+$Comp
+L 1825910-7:1825910-7 SW2
+U 1 1 5DABD775
+P 4050 6150
+F 0 "SW2" H 4050 6517 50  0000 C CNN
+F 1 "Tactile" H 4050 6426 50  0000 C CNN
+F 2 "SW_1825910-7" H 4050 6150 50  0001 L BNN
+F 3 "https://www.te.com/usa-en/product-1825910-7.html?te_bu=Cor&te_type=disp&te_campaign=seda_glo_cor-seda-global-disp-prtnr-fy19-seda-model-bom-cta_sma-317_1&elqCampaignId=32493" H 4050 6150 50  0001 L BNN
+F 4 "1825910-7" H 4050 6150 50  0001 L BNN "Part Number"
+	1    4050 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 6250 3650 6050
+Wire Wire Line
+	3650 6050 3350 6050
+Connection ~ 3650 6050
+Connection ~ 3350 6050
+Wire Wire Line
+	4450 6050 4450 6250
+Connection ~ 4450 6250
 $EndSCHEMATC
