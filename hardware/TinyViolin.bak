@@ -915,7 +915,7 @@ U 1 1 5DB36837
 P 6700 5950
 F 0 "LS1" H 6870 5946 50  0000 L CNN
 F 1 "Speaker" H 6870 5855 50  0000 L CNN
-F 2 "SP-1605:SP-1605" H 6700 5750 50  0001 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P3.81mm_Drill0.8mm" H 6700 5750 50  0001 C CNN
 F 3 "https://www.soberton.com/wp-content/uploads/2018/07/SP-1605-June-2018.pdf" H 6690 5900 50  0001 C CNN
 F 4 "SP-1605" H 6700 5950 50  0001 C CNN "Part Number"
 	1    6700 5950
