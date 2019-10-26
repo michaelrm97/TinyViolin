@@ -3,6 +3,7 @@
 
 /*End of auto generated code by Atmel studio */
 
+#include "inc/buttons.h"
 #include "inc/leds.h"
 #include "inc/notes.h"
 #include "inc/pot.h"
@@ -13,7 +14,6 @@
 void play(void );
 //End of Auto generated function prototypes by Atmel Studio
 
-
 #define PERIOD 10000
 
 void play(void) {
@@ -21,9 +21,11 @@ void play(void) {
 }
 
 void setup() {
-  init_notes();
+  init_buttons();
   init_leds();
+  init_notes();
   init_pot();
+  const auto pressed = get_pressed_buttons();
   Timer1.initialize(PERIOD);
   Timer1.attachInterrupt(play);
 }

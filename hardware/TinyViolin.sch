@@ -1095,7 +1095,7 @@ U 1 1 5DB4AE2D
 P 1700 5400
 F 0 "U1" H 1300 3950 50  0000 R CNN
 F 1 "ATmega328-PU" H 2350 3950 50  0000 R CNN
-F 2 "Package_DIP:DIP-28_W7.62mm_Socket_LongPads" H 1700 5400 50  0001 C CIN
+F 2 "Package_DIP:DIP-28_W7.62mm_LongPads" H 1700 5400 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 1700 5400 50  0001 C CNN
 	1    1700 5400
 	1    0    0    -1  
