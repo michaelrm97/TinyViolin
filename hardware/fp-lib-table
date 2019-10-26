@@ -7,4 +7,5 @@
   (lib (name MHS122)(type KiCad)(uri ${KIPRJMOD}/MHS122.pretty)(options "")(descr ""))
   (lib (name D6)(type KiCad)(uri ${KIPRJMOD}/D6.pretty)(options "")(descr ""))
   (lib (name SP-1605)(type KiCad)(uri ${KIPRJMOD}/SP-1605.pretty)(options "")(descr ""))
+  (lib (name DO219)(type KiCad)(uri ${KIPRJMOD}/DO219.pretty)(options "")(descr ""))
 )
