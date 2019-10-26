@@ -15,11 +15,11 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text Label 2300 6200 0    50   ~ 0
-PB4
+PB1
 Text Label 2300 6100 0    50   ~ 0
-PB3
-Text Label 2300 6000 0    50   ~ 0
 PB2
+Text Label 2300 6000 0    50   ~ 0
+PB3
 Text Label 5850 3800 0    50   ~ 0
 PB2
 Text Label 7850 3800 0    50   ~ 0
@@ -62,7 +62,7 @@ $EndComp
 Text Label 4850 3800 0    50   ~ 0
 PB1
 Text Label 2300 5900 0    50   ~ 0
-PB1
+PB4
 $Comp
 L power:GND #PWR0104
 U 1 1 5DACF829
@@ -213,8 +213,6 @@ NoConn ~ 3650 2200
 Wire Wire Line
 	3450 2600 3500 2600
 NoConn ~ 2800 2400
-Wire Wire Line
-	2400 2500 1700 2500
 Text Label 3800 4050 0    50   ~ 0
 ~RST
 Text Label 2350 5700 0    50   ~ 0
@@ -363,12 +361,12 @@ MOSI
 $Comp
 L power:GND #PWR0121
 U 1 1 5DAA4917
-P 1700 2800
-F 0 "#PWR0121" H 1700 2550 50  0001 C CNN
-F 1 "GND" H 1705 2627 50  0000 C CNN
-F 2 "" H 1700 2800 50  0001 C CNN
-F 3 "" H 1700 2800 50  0001 C CNN
-	1    1700 2800
+P 1600 2900
+F 0 "#PWR0121" H 1600 2650 50  0001 C CNN
+F 1 "GND" H 1605 2727 50  0000 C CNN
+F 2 "" H 1600 2900 50  0001 C CNN
+F 3 "" H 1600 2900 50  0001 C CNN
+	1    1600 2900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -500,10 +498,6 @@ Text Label 2300 6400 0    50   ~ 0
 SPEAKER
 Text Label 5650 5950 2    50   ~ 0
 SPEAKER
-NoConn ~ 1100 5900
-NoConn ~ 1100 6000
-NoConn ~ 1100 6100
-NoConn ~ 1100 6200
 NoConn ~ 2300 6600
 NoConn ~ 2300 6500
 NoConn ~ 2300 4200
@@ -523,10 +517,8 @@ Wire Wire Line
 	6550 2200 6800 2200
 Wire Wire Line
 	6550 2400 6800 2400
-Connection ~ 1700 2500
 Wire Wire Line
-	1700 2800 1350 2800
-Connection ~ 1700 2800
+	1600 2900 1250 2900
 Connection ~ 6400 2200
 Wire Wire Line
 	6400 2200 6200 2200
@@ -534,55 +526,9 @@ Connection ~ 7900 2200
 Wire Wire Line
 	7900 2200 8200 2200
 Wire Wire Line
-	9100 4500 9150 4500
-Wire Wire Line
-	9100 4600 9400 4600
-Wire Wire Line
-	9100 4800 9400 4800
-Connection ~ 9150 4500
-Wire Wire Line
-	9400 4300 9400 4600
-Connection ~ 9400 4600
-Wire Wire Line
-	9400 5200 9400 4800
-Connection ~ 9400 4800
-Wire Wire Line
-	4550 5000 4350 5000
-Connection ~ 4350 5000
-Wire Wire Line
-	4250 5000 4350 5000
-Wire Wire Line
-	4850 5800 4850 5750
-Wire Wire Line
-	4350 4900 4350 5000
-Wire Wire Line
-	4750 5750 4850 5750
-Connection ~ 4850 5750
-Wire Wire Line
-	4850 5750 4850 5650
-Wire Wire Line
-	9150 4450 9150 4500
-Wire Wire Line
-	9100 5000 9150 5000
-Wire Wire Line
-	9150 5000 9150 5050
-Connection ~ 9150 5000
-Wire Wire Line
 	7900 2150 7900 2200
 Wire Wire Line
 	6400 2150 6400 2200
-Wire Wire Line
-	1700 2450 1700 2500
-Wire Wire Line
-	1350 2450 1350 2800
-Wire Wire Line
-	5650 5950 5750 5950
-Wire Wire Line
-	5750 5900 5750 5950
-Connection ~ 5750 5950
-Wire Wire Line
-	5750 5950 6050 5950
-Connection ~ 3700 4700
 $Comp
 L power:+3.3V #PWR0130
 U 1 1 5DA9A983
@@ -775,24 +721,12 @@ F 4 "1825255-1" H 2600 2500 50  0001 C CNN "Part Number"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Battery_Cell BT1
-U 1 1 5DAA293B
-P 1700 2700
-F 0 "BT1" H 1818 2796 50  0000 L CNN
-F 1 "Battery_Cell" H 1818 2705 50  0000 L CNN
-F 2 "BAT-HLD-001-THM:LINX_BAT-HLD-001-THM" V 1700 2760 50  0001 C CNN
-F 3 "https://linxtechnologies.com/wp/wp-content/uploads/bat-hld-001-thm.pdf" V 1700 2760 50  0001 C CNN
-F 4 "BAT-HLD-001-THM" H 1700 2700 50  0001 C CNN "Part Number"
-	1    1700 2700
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:AVR-ISP-6 J1
 U 1 1 5DA97199
 P 3400 3950
 F 0 "J1" H 3121 4046 50  0000 R CNN
 F 1 "AVR-ISP-6" H 3121 3955 50  0000 R CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Vertical" V 3150 4000 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" V 3150 4000 50  0001 C CNN
 F 3 "https://katalog.we-online.de/em/datasheet/6120xx21621.pdf" H 2125 3400 50  0001 C CNN
 F 4 "61200621621" H 3400 3950 50  0001 C CNN "Part Number"
 	1    3400 3950
@@ -933,25 +867,25 @@ $EndComp
 $Comp
 L Connector:TestPoint TP1
 U 1 1 5DB550E0
-P 1700 2450
-F 0 "TP1" H 1758 2568 50  0000 L CNN
-F 1 "VBT" H 1758 2477 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 1900 2450 50  0001 C CNN
-F 3 "~" H 1900 2450 50  0001 C CNN
-F 4 "~" H 1700 2450 50  0001 C CNN "Part Number"
-	1    1700 2450
+P 1600 2500
+F 0 "TP1" H 1658 2618 50  0000 L CNN
+F 1 "VBT" H 1658 2527 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 1800 2500 50  0001 C CNN
+F 3 "~" H 1800 2500 50  0001 C CNN
+F 4 "~" H 1600 2500 50  0001 C CNN "Part Number"
+	1    1600 2500
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:TestPoint TP2
 U 1 1 5DB55599
-P 1350 2450
-F 0 "TP2" H 1408 2568 50  0000 L CNN
-F 1 "GND" H 1408 2477 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 1550 2450 50  0001 C CNN
-F 3 "~" H 1550 2450 50  0001 C CNN
-F 4 "~" H 1350 2450 50  0001 C CNN "Part Number"
-	1    1350 2450
+P 1250 2500
+F 0 "TP2" H 1308 2618 50  0000 L CNN
+F 1 "GND" H 1308 2527 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 1450 2500 50  0001 C CNN
+F 3 "~" H 1450 2500 50  0001 C CNN
+F 4 "~" H 1250 2500 50  0001 C CNN "Part Number"
+	1    1250 2500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -977,54 +911,6 @@ F 3 "~" H 8100 2150 50  0001 C CNN
 F 4 "~" H 7900 2150 50  0001 C CNN "Part Number"
 	1    7900 2150
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint TP5
-U 1 1 5DB65B13
-P 9150 4450
-F 0 "TP5" H 9208 4568 50  0000 L CNN
-F 1 "SS" H 9208 4477 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 9350 4450 50  0001 C CNN
-F 3 "~" H 9350 4450 50  0001 C CNN
-F 4 "~" H 9150 4450 50  0001 C CNN "Part Number"
-	1    9150 4450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint TP6
-U 1 1 5DB66225
-P 9400 4300
-F 0 "TP6" H 9458 4418 50  0000 L CNN
-F 1 "MOSI" H 9458 4327 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 9600 4300 50  0001 C CNN
-F 3 "~" H 9600 4300 50  0001 C CNN
-F 4 "~" H 9400 4300 50  0001 C CNN "Part Number"
-	1    9400 4300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint TP7
-U 1 1 5DB67BA8
-P 9150 5050
-F 0 "TP7" H 9092 5076 50  0000 R CNN
-F 1 "MISO" H 9092 5167 50  0000 R CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 9350 5050 50  0001 C CNN
-F 3 "~" H 9350 5050 50  0001 C CNN
-F 4 "~" H 9150 5050 50  0001 C CNN "Part Number"
-	1    9150 5050
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:TestPoint TP8
-U 1 1 5DB6883D
-P 9400 5200
-F 0 "TP8" H 9342 5226 50  0000 R CNN
-F 1 "SCK" H 9342 5317 50  0000 R CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 9600 5200 50  0001 C CNN
-F 3 "~" H 9600 5200 50  0001 C CNN
-F 4 "~" H 9400 5200 50  0001 C CNN "Part Number"
-	1    9400 5200
-	-1   0    0    1   
 $EndComp
 $Comp
 L RGB_LED:RGB_LED D3
@@ -1075,54 +961,6 @@ F 4 "COM-12877" H 7850 5000 50  0001 C CNN "Part Number"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint TP9
-U 1 1 5DB8346D
-P 4350 4900
-F 0 "TP9" H 4408 5018 50  0000 L CNN
-F 1 "LEDS" H 4408 4927 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 4550 4900 50  0001 C CNN
-F 3 "~" H 4550 4900 50  0001 C CNN
-F 4 "~" H 4350 4900 50  0001 C CNN "Part Number"
-	1    4350 4900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint TP10
-U 1 1 5DB86EFB
-P 4750 5750
-F 0 "TP10" V 4945 5822 50  0000 C CNN
-F 1 "BOW" V 4854 5822 50  0000 C CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 4950 5750 50  0001 C CNN
-F 3 "~" H 4950 5750 50  0001 C CNN
-F 4 "~" H 4750 5750 50  0001 C CNN "Part Number"
-	1    4750 5750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:TestPoint TP11
-U 1 1 5DB9FB9D
-P 5750 5900
-F 0 "TP11" H 5808 6018 50  0000 L CNN
-F 1 "SPEAKER" H 5808 5927 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 5950 5900 50  0001 C CNN
-F 3 "~" H 5950 5900 50  0001 C CNN
-F 4 "~" H 5750 5900 50  0001 C CNN "Part Number"
-	1    5750 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint TP12
-U 1 1 5DBAB191
-P 3700 4700
-F 0 "TP12" H 3758 4818 50  0000 L CNN
-F 1 "CRYSTAL" H 3758 4727 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 3900 4700 50  0001 C CNN
-F 3 "~" H 3900 4700 50  0001 C CNN
-F 4 "~" H 3700 4700 50  0001 C CNN "Part Number"
-	1    3700 4700
-	1    0    0    -1  
-$EndComp
-$Comp
 L 503182-1852:503182-1852 J2
 U 1 1 5DBBD4B3
 P 10000 5000
@@ -1137,17 +975,9 @@ $EndComp
 Wire Wire Line
 	9550 4400 9800 4400
 Wire Wire Line
-	9150 4500 9800 4500
-Wire Wire Line
-	9400 4600 9800 4600
-Wire Wire Line
 	9100 4700 9800 4700
 Wire Wire Line
-	9400 4800 9800 4800
-Wire Wire Line
 	9100 4900 9800 4900
-Wire Wire Line
-	9150 5000 9800 5000
 Wire Wire Line
 	9550 5100 9800 5100
 NoConn ~ 9800 5300
@@ -1245,14 +1075,127 @@ Wire Wire Line
 	4450 6050 4450 6250
 Connection ~ 4450 6250
 $Comp
-L MCU_Microchip_ATmega:ATmega328PB-AU U1
-U 1 1 5DB3D4B2
+L BAT-HLD-001-THM:BAT-HLD-001-THM BT1
+U 1 1 5DB41DC7
+P 1600 2700
+F 0 "BT1" V 1646 2567 50  0000 R CNN
+F 1 "BAT-HLD-001-THM" V 1555 2567 50  0000 R CNN
+F 2 "LINX_BAT-HLD-001-THM" H 1600 2700 50  0001 L BNN
+F 3 "https://linxtechnologies.com/wp/wp-content/uploads/bat-hld-001-thm.pdf" H 1600 2700 50  0001 L BNN
+F 4 "BAT-HLD-001-THM" H -100 1100 50  0001 C CNN "Part Number"
+	1    1600 2700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1700 3900 1800 3900
+Connection ~ 1700 3900
+$Comp
+L MCU_Microchip_ATmega:ATmega328-PU U1
+U 1 1 5DB4AE2D
 P 1700 5400
-F 0 "U1" H 1250 3950 50  0000 C CNN
-F 1 "ATmega328PB-AU" H 2100 3950 50  0000 C CNN
-F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 1700 5400 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/40001906C.pdf" H 1700 5400 50  0001 C CNN
+F 0 "U1" H 1300 3950 50  0000 R CNN
+F 1 "ATmega328-PU" H 2350 3950 50  0000 R CNN
+F 2 "Package_DIP:DIP-28_W7.62mm_Socket_LongPads" H 1700 5400 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 1700 5400 50  0001 C CNN
 	1    1700 5400
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:Conn_01x01_Male H1
+U 1 1 5DB4E674
+P 3000 6600
+F 0 "H1" H 3106 6778 50  0000 C CNN
+F 1 "M3" H 3106 6687 50  0000 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 3000 6600 50  0001 C CNN
+F 3 "~" H 3000 6600 50  0001 C CNN
+	1    3000 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male H2
+U 1 1 5DB4ECF6
+P 3000 6850
+F 0 "H2" H 3106 7028 50  0000 C CNN
+F 1 "M3" H 3106 6937 50  0000 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 3000 6850 50  0001 C CNN
+F 3 "~" H 3000 6850 50  0001 C CNN
+	1    3000 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male H3
+U 1 1 5DB4ED70
+P 3000 7100
+F 0 "H3" H 3106 7278 50  0000 C CNN
+F 1 "M3" H 3106 7187 50  0000 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 3000 7100 50  0001 C CNN
+F 3 "~" H 3000 7100 50  0001 C CNN
+	1    3000 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male H4
+U 1 1 5DB4EECC
+P 3450 6600
+F 0 "H4" H 3556 6778 50  0000 C CNN
+F 1 "M3" H 3556 6687 50  0000 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 3450 6600 50  0001 C CNN
+F 3 "~" H 3450 6600 50  0001 C CNN
+	1    3450 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male H5
+U 1 1 5DB4EF66
+P 3450 6850
+F 0 "H5" H 3556 7028 50  0000 C CNN
+F 1 "M3" H 3556 6937 50  0000 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 3450 6850 50  0001 C CNN
+F 3 "~" H 3450 6850 50  0001 C CNN
+	1    3450 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male H6
+U 1 1 5DB4EFEC
+P 3450 7100
+F 0 "H6" H 3556 7278 50  0000 C CNN
+F 1 "M3" H 3556 7187 50  0000 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 3450 7100 50  0001 C CNN
+F 3 "~" H 3450 7100 50  0001 C CNN
+	1    3450 7100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3200 6600
+NoConn ~ 3200 6850
+NoConn ~ 3200 7100
+NoConn ~ 3650 6600
+NoConn ~ 3650 6850
+NoConn ~ 3650 7100
+Connection ~ 1600 2900
+Wire Wire Line
+	1250 2500 1250 2900
+Wire Wire Line
+	2400 2500 1600 2500
+Connection ~ 1600 2500
+Wire Wire Line
+	9100 4600 9800 4600
+Wire Wire Line
+	9100 4500 9800 4500
+Wire Wire Line
+	9100 5000 9800 5000
+Wire Wire Line
+	9100 4800 9800 4800
+Wire Wire Line
+	5650 5950 6050 5950
+Wire Wire Line
+	4250 5000 4550 5000
+Wire Wire Line
+	4850 5650 4850 5800
+Text Label 1900 2500 0    50   ~ 0
+BAT
+Text Label 2850 2600 0    50   ~ 0
+BAT1
+Text Label 3500 1200 0    50   ~ 0
+VSW
 $EndSCHEMATC

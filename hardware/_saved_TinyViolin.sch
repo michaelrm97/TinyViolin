@@ -494,14 +494,14 @@ Wire Wire Line
 	6500 6050 6400 6050
 Wire Wire Line
 	6400 6050 6400 6200
-Text Label 2300 6400 0    50   ~ 0
+Text Label 2300 4300 0    50   ~ 0
 SPEAKER
 Text Label 5650 5950 2    50   ~ 0
 SPEAKER
 NoConn ~ 2300 6600
 NoConn ~ 2300 6500
 NoConn ~ 2300 4200
-NoConn ~ 2300 4300
+NoConn ~ 2300 6400
 NoConn ~ 2300 5200
 NoConn ~ 2300 5300
 NoConn ~ 2300 5400
