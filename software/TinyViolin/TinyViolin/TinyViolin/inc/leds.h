@@ -9,6 +9,9 @@
 #define LEDS_H_
 
 #include <Arduino.h>
+#include <FastLED.h>
+
+#define LED_RED CRGB::Red
 
 // Initialize module
 void init_leds();
