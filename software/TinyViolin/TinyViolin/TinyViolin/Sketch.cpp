@@ -17,8 +17,9 @@ void play(void);
 
 #define PERIOD 10000
 
-#define CROTCHET_PERIOD 375 // How long to wait before displaying next note
-                            // for a crotchet
+#define CROTCHET_PERIOD 40  // How long to wait before displaying next note
+                            // for a crotchet (half the expected time of
+                            // playing the note at 75bpm)
 
 void play(void) {
   static bool start = true;
