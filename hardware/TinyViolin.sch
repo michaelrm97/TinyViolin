@@ -715,8 +715,8 @@ P 2600 2500
 F 0 "SW1" H 2600 2785 50  0000 C CNN
 F 1 "SW_SPDT" H 2600 2694 50  0000 C CNN
 F 2 "MHS122:MHS122" H 2600 2500 50  0001 C CNN
-F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825255&DocType=Customer+Drawing&DocLang=English" H 2600 2500 50  0001 C CNN
-F 4 "1825255-1" H 2600 2500 50  0001 C CNN "Part Number"
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/APEM%20Components%20PDFs/MHS_Series.PDF" H 2600 2500 50  0001 C CNN
+F 4 "MHS122" H 2600 2500 50  0001 C CNN "Part Number"
 	1    2600 2500
 	1    0    0    -1  
 $EndComp
