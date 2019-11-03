@@ -1,0 +1,29 @@
+﻿<Window x:Class="TVLoader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="TVLoader" Height="225" Width="400">
+   <Grid>
+      <Grid.ColumnDefinitions>
+         <ColumnDefinition Width="365*"/>
+      </Grid.ColumnDefinitions>
+      <StackPanel Margin="10px" Orientation="Vertical" Grid.Column="1">
+         <Label Content="Select MIDI File:" Target="{Binding ElementName=midiFileNameBox}"/>
+         <DockPanel Margin="4px">
+            <Button DockPanel.Dock="Right" Width="80px" Click="BtnBrowseMidi_OnClick" Margin="4,0,0,0">Browse...</Button>
+            <TextBox Name="midiFileNameBox" TextChanged="Text_OnChange" DockPanel.Dock="Left"/>
+         </DockPanel>
+         <Label Content="Select Output File:" Target="{Binding ElementName=outputFileNameBox}"/>
+         <DockPanel Margin="4px">
+            <Button DockPanel.Dock="Right" Width="80px" Click="BtnBrowseOutput_OnClick" Margin="4,0,0,0">Browse...</Button>
+            <TextBox Name="outputFileNameBox" TextChanged="Text_OnChange" DockPanel.Dock="Left"/>
+         </DockPanel>
+         <DockPanel Margin="0,20,4,0">
+            <Button Name="loadButton" DockPanel.Dock="Right" Width="60px" Click="BtnLoad_OnClick" Margin="4,0,0,0" IsEnabled="False">Load</Button>
+            <Label Content="Load onto SD Card" Target="{Binding ElementName=loadButton}"/>
+         </DockPanel>
+      </StackPanel>
+   </Grid>
+</Window>
