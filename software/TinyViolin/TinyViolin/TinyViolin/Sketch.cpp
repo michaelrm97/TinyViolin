@@ -11,9 +11,19 @@
 
 #include <FastLED.h>
 #include <TimerOne.h>
-//Beginning of Auto generated function prototypes by Atmel Studio
+
+const auto LED_PIN = 4;
+const auto NUM_LEDS = 4;
+const auto MIC_PIN = 9;
+const auto POT_PIN = A0;
+
+Buttons buttons;
+Leds<LED_PIN, NUM_LEDS> leds;
+Notes<MIC_PIN> notes;
+Pot<POT_PIN> pot;
+Song song;
+
 void play(void);
-//End of Auto generated function prototypes by Atmel Studio
 
 #define PERIOD 10000
 
@@ -27,42 +37,42 @@ void play(void) {
   static uint8_t prev_button = 0;
   static uint16_t note_wait = 0;
   static uint8_t next_string, next_finger;
-  const auto new_pot_status = read_pot();
-  const auto new_button = get_pressed_button();
+  const auto new_pot_status = pot.read();
+  const auto new_button = buttons.get_pressed();
   if (start) { // Initial state
     start = false;
-    get_next_note(&next_string, &next_finger);
-    display_leds(next_string, next_finger);
+    song.get_next_note(&next_string, &next_finger);
+    leds.display(next_string, next_finger);
   }
   if (new_pot_status != pot_status || prev_button == new_button) {
     // Change in status
     if (new_pot_status == POT_NONE) {
-      stop_note(); // Stop if not moving bow
+      notes.stop(); // Stop if not moving bow
     } else { // Either changed bow or finger
       if (new_button == next_finger) { // Check whether to advance
-        note_wait = advance_note() * CROTCHET_PERIOD / 4;
-        display_leds(next_string, next_finger);
-        get_next_note(&next_string, &next_finger);
+        note_wait = song.advance_note() * CROTCHET_PERIOD / 4;
+        leds.display(next_string, next_finger);
+        song.get_next_note(&next_string, &next_finger);
       }
-      play_note(get_note(new_button)); // Play note
+      notes.play(song.get_note(new_button)); // Play note
     }
   }
   if (note_wait > 0) { // Change leds to show next note
     note_wait--;
     if (note_wait == 0) {
-      display_leds(next_string, next_finger);
+      leds.display(next_string, next_finger);
     }
   }
 }
 
 void setup() {
-  init_buttons();
-  init_leds();
-  init_notes();
-  init_pot();
-  const auto pressed = get_pressed_buttons();
-  if (init_song(pressed)) {
-    display_leds(LED_RED, LED_RED, LED_RED, LED_RED);
+  buttons.init();
+  leds.init();
+  notes.init();
+  pot.init();
+  const auto pressed = buttons.get_all_pressed();
+  if (song.init(pressed)) {
+    leds.display(LED_RED, LED_RED, LED_RED, LED_RED);
     while(1);
   }
   Timer1.initialize(PERIOD);
@@ -70,5 +80,5 @@ void setup() {
 }
 
 void loop() {
-  update_song();
+  song.update();
 }

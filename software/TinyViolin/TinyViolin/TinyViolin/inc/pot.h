@@ -17,10 +17,40 @@ typedef enum {
   POT_UP  
 } pot_status_t;
 
-// Initialize module
-void init_pot();
+template <int pin>
+class Pot {
+ public:
+  void init() {}
+  pot_status_t read() {
+    const int val = analogRead(pin);
+    int diff = 0;
+    if (prev != -1) {
+      diff = val - prev;
+    }
+    prev = val;
+    diff_avg -= diffs[i];
+    diffs[i] = diff;
+    diff_avg += diff;
+    i = (i + 1) % NUM_DIFFS;
+    const float rate = (float)diff_avg / NUM_DIFFS;
+    if (rate > THRESH) {
+      return POT_UP;
+      } else if (rate < -THRESH) {
+      return POT_DOWN;
+      } else {
+      return POT_NONE;
+    }
+  }
+ private:
+  static const auto NUM_DIFFS = 8;
+  static const auto THRESH = 2;
 
-// Read pot value and return if pot is sliding up or down
-pot_status_t read_pot();
+  int i = 0;
+  int prev = -1;
+  int diffs[NUM_DIFFS] = {0};
+  int diff_avg = 0;
+
+};
+
 
 #endif /* POT_H_ */

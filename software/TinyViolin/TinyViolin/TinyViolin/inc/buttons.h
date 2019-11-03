@@ -11,13 +11,15 @@
 
 #include <Arduino.h>
 
-// Initialize module
-void init_buttons(void);
+class Buttons {
+ public:
+  void init();
+  uint8_t get_pressed();
+  uint8_t get_all_pressed();
 
-// Return highest button that was pressed (1-4, 0 for no button pressed)
-uint8_t get_pressed_button(void);
-
-// Determines all pressed buttons
-uint8_t get_pressed_buttons(void);
+ private:
+  static const auto NUM_BUTTONS = 4;
+  uint8_t button_pins[NUM_BUTTONS] = {0, 1, 2, 3};
+};
 
 #endif /* BUTTONS_H_ */

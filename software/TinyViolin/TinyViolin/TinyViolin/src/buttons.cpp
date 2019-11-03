@@ -9,19 +9,15 @@
 
 #include <Arduino.h>
 
-#define NUM_BUTTONS 4
-
-const uint8_t button_pins[] = {0, 1, 2, 3};
-
 // Initialize module
-void init_buttons(void) {
+void Buttons::init(void) {
   for (int i = 0; i < NUM_BUTTONS; i++) {
     pinMode(button_pins[i], INPUT_PULLUP);
   }
 }
 
 // Return highest button that was pressed (1-4, 0 for no button pressed)
-uint8_t get_pressed_button(void) {
+uint8_t Buttons::get_pressed() {
   for (int i = NUM_BUTTONS - 1; i >= 0; i++) {
     if (digitalRead(button_pins[i])) {
       return i + 1;
@@ -31,10 +27,10 @@ uint8_t get_pressed_button(void) {
 }
 
 // Determines all pressed buttons
-uint8_t get_pressed_buttons(void) {
+uint8_t Buttons::get_all_pressed() {
   uint8_t num = 0;
   for (int i = 0; i < NUM_BUTTONS; i++) {
-    num = (num << 2) | digitalRead(button_pins[i]);
+    num = (num << 1) | digitalRead(button_pins[i]);
   }
   return num;
 }
