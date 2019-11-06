@@ -36,16 +36,16 @@ class Song {
   static constexpr auto HALF_BUFFER_SIZE = (NOTE_BUFFER_SIZE << 1);
 
   uint8_t open_notes[NUM_STRINGS] = {
-    NOTE_G3, NOTE_D4, NOTE_A4, NOTE_E5, NOTE_C6
+    NOTE_G3, NOTE_D4, NOTE_A4, NOTE_E5, NOTE_B6
   };
 
-  uint16_t song_notes[NOTE_BUFFER_SIZE];
+  uint32_t song_notes[NOTE_BUFFER_SIZE];
   int curr_note = 0;
   int curr_buffer = 0;
 
   File song_file;
 
-  void load_from_sd(uint16_t *buff, int n);
+  void load_from_sd(uint32_t *buff, int n);
 
 };
 

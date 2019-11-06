@@ -13,19 +13,19 @@
 #include "notes.h"
 
 /*
- * Format of each note in song:
- * * string : 3 bits
- * * correct finger : 3 bits
- * * note offset : 4 bits
- * * length : 6 bits (crotchet = 4, quaver = 2, semi-quaver = 1, inf = 0)
+ * Format of each note in song (4 bytes):
+ * * string : 4 bits
+ * * correct finger : 4 bits
+ * * note offset : 4 bits each
+ * * length : 8 bits (crotchet = 4, quaver = 2, semi-quaver = 1, inf = 0)
  */
 
-#define GET_STRING(n)     ((n >> 13)        & 0x07)
-#define GET_FINGER(n)     ((n >> 10)        & 0x07)
-#define GET_OFFSET(n, f)  ((n >> (10 - f))  & 0x01)
-#define GET_LENGTH(n)     ((n >> 0)         & 0x3F)
+#define GET_STRING(n)     ((n >> 28)                & 0x0F)
+#define GET_FINGER(n)     ((n >> 24)                & 0x0F)
+#define GET_OFFSET(n, f)  ((n >> (24 - (f << 2)))   & 0x0F)
+#define GET_LENGTH(n)     ((n >> 0)                 & 0xFF)
 
-void Song::load_from_sd(uint16_t *buff, int n) {
+void Song::load_from_sd(uint32_t *buff, int n) {
   n *= 2;
   uint8_t *buf = (uint8_t *) buff;
   while (n > 0) {
@@ -53,16 +53,16 @@ bool Song::init(const uint8_t n) {
 uint8_t Song::get_note(const uint8_t finger) {
   const auto string = GET_STRING(song_notes[curr_note]);
   if (finger == 0) return open_notes[string];
-  else return open_notes[string] + 2 * finger -
-    GET_OFFSET(song_notes[curr_note], finger);
+  else return open_notes[string] + 
+      GET_OFFSET(song_notes[curr_note], finger);
 }
 
 // Get next note
 void Song::get_next_note(uint8_t *string, uint8_t *finger) {
-int next = curr_note + 1;
-if (next == NOTE_BUFFER_SIZE) next = 0;
-*string = GET_STRING(song_notes[next]);
-*finger = GET_FINGER(song_notes[next]);
+  int next = curr_note + 1;
+  if (next == NOTE_BUFFER_SIZE) next = 0;
+  *string = GET_STRING(song_notes[next]);
+  *finger = GET_FINGER(song_notes[next]);
 }
 
 // Advance to next note in song - return time to display

@@ -13,30 +13,39 @@ namespace TVLoader
 
       internal struct Note
       {
-         internal byte str;
+         internal byte note;
          internal byte finger;
          internal byte[] offsets;
          internal byte length;
 
-         internal Note(byte _str, byte _finger, byte[] _offsets, byte _length)
+         internal byte Str { get; set; }
+
+         internal Note(byte _note, byte _str, byte _finger, byte[] _offsets, byte _length)
          {
-            str = _str;
+            note = _note;
+            Str = _str;
             finger = _finger;
             offsets = _offsets;
             length = _length;
          }
 
-         internal ushort Format()
+         internal uint Format()
          {
-            ushort bits = 0;
-            bits |= (ushort)(str << 13);
-            bits |= (ushort)(finger << 10);
+            uint bits = 0;
+            bits |= (uint)(Str << 28);
+            bits |= (uint)(finger << 24);
             for (var i = 0; i < 4; i++)
             {
-               bits |= (ushort)(offsets[i] << (10 - i));
+               bits |= (uint)(offsets[i] << (20 - (i << 2)));
             }
             bits |= length;
+            Debug.WriteLine("{7}: {0} {1} {2}{3}{4}{5} {6}", Str, finger, offsets[0], offsets[1], offsets[2], offsets[3], length, note);
             return bits;
+         }
+
+         internal void addRest()
+         {
+            length = 0;
          }
 
       }
@@ -60,13 +69,118 @@ namespace TVLoader
                     };
                if (Major)
                {
-                  return keyStrings[Sharps + 7];
+                  return keyStrings[Sharps + 7] + " major";
                }
                else
                {
-                  return keyStrings[(Sharps + 10) % 15];
+                  return keyStrings[(Sharps + 10) % 15] + " minor";
                }
             }
+         }
+
+         internal byte[,] GetNotes()
+         {
+            byte[,] keyNotes = new byte[,]
+            {
+               { 55, 57, 59, 60, 62 },
+               { 62, 64, 65, 67, 69 },
+               { 69, 71, 72, 74, 76 },
+               { 76, 77, 79, 81, 83 },
+               { 76, 84, 86, 88, 89 }
+            };
+            var seventh = (55 + 7 * Sharps) % 12;
+            if (Sharps > 0)
+            {
+               var sig = 5;
+               for (int i = 0; i < Sharps; i++)
+               {
+                  for (int j = 0; j < 5; j++)
+                  {
+                     for (int k = 1; k < 5; k++)
+                     {
+                        if (keyNotes[j, k] % 12 == sig)
+                        {
+                           keyNotes[j, k]++;
+                        }
+                        if (!Major && keyNotes[j, k] % 12 == seventh)
+                        {
+                           keyNotes[j, k]++;
+                        }
+                     }
+                  }
+                  sig = (sig + 7) % 12;
+               }
+            }
+            else if (Sharps < 0)
+            {
+               var sig = 11;
+               for (int i = 0; i < -Sharps; i++)
+               {
+                  for (int j = 0; j < 5; j++)
+                  {
+                     for (int k = 1; k < 5; k++)
+                     {
+                        if (keyNotes[j, k] % 12 == sig)
+                        {
+                           keyNotes[j, k]--;
+                        }
+                        if (!Major && keyNotes[j, k] % 12 == seventh)
+                        {
+                           keyNotes[j, k]++;
+                        }
+                     }
+                  }
+                  sig = (sig + 5) % 12;
+               }
+            }
+            return keyNotes;
+         }
+
+         internal Note GetNote(byte n, byte length, ref int prevString)
+         {
+            byte[,] keyNotes = GetNotes();
+            // Try and find n in key notes
+            int s = -1;
+            int f = -1;
+
+            for (var i = 0; i < 5 && s == -1; i++)
+            {
+               for (var j = 0; j < 5 && s == -1; j++)
+               {
+                  if (keyNotes[i,j] == n)
+                  {
+                     if (j == 4 && i < 4 && keyNotes[i+1,0] == n && (prevString == -1 || prevString != i))
+                     {
+                        s = i + 1;
+                        f = 0;
+                     } else
+                     {
+                        s = i;
+                        f = j;
+                     }
+                  }
+               }
+            }
+
+            if (s == -1)
+            {
+               // Find s and f through maths
+               s = (n - 55) / 7;
+               f = (((n - 55) % 7) + 1) / 2;
+               keyNotes[s, f] = n;
+            }
+
+            keyNotes[4, 0] = 83;
+
+            byte[] offsets = new byte[4];
+            for (var i = 1; i < 5; i++)
+            {
+               offsets[i-1] = (byte) (keyNotes[s, i] - keyNotes[s, 0]);
+            }
+
+            prevString = s;
+
+            return new Note(n, (byte)s, (byte)f, offsets, length);
          }
 
       }
@@ -141,6 +255,8 @@ namespace TVLoader
 
          bool notesChanged = false;
 
+         int prevString = -1;
+
          while (offset < chunkLength && !endOfTrack)
          {
             int delta = GetVarLength(chunk, ref offset);
@@ -153,12 +269,18 @@ namespace TVLoader
                Debug.WriteLine("ctime: {0} ltime: {1}", ctime, ltime);
                if (dur > 0)
                {
-                  byte? cnote = oldValues.Select((s, i) => new { i, s }).Where(t => t.s > 0).Select(t => (byte)t.i)?.Max();
-                  Debug.WriteLine(string.Format("Dur: {0} Note: {1}", dur, cnote));
-                  //if (cnotes.Length > 0)
-                  //{
-                  //   notes.Add(new Note());
-                  //}
+                  try
+                  {
+                     byte note = oldValues.Select((s, i) => new { i, s }).Where(t => t.s > 0).Select(t => (byte)t.i).Max();
+                     Debug.WriteLine(string.Format("Dur: {0} Note: {1}", dur, note));
+                     notes.Add(keySig.GetNote(note, dur, ref prevString));
+                  } catch {
+                     if (notes.Count > 0)
+                     {
+                        notes[notes.Count - 1].addRest();
+                     }
+                     prevString = -1;
+                  }
                }
 
                Array.Copy(noteValues, oldValues, 128);
@@ -223,6 +345,10 @@ namespace TVLoader
                      // End of track
                      endOfTrack = true;
                      Debug.WriteLine("End of track");
+                     if (notes.Count > 0)
+                     {
+                        notes[notes.Count - 1].addRest();
+                     }
                      break;
                   case 0x51:
                      // Tempo setting
@@ -378,7 +504,7 @@ namespace TVLoader
 
       public byte[] GetData()
       {
-         var ret = new byte[2 * notes.Count];
+         var ret = new byte[4 * notes.Count];
          var data = notes.Select(n => n.Format()).ToArray();
          Buffer.BlockCopy(data, 0, ret, 0, ret.Length);
          return ret;
