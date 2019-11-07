@@ -25,6 +25,7 @@
 #define GET_OFFSET(n, f)  ((n >> (24 - (f << 2)))   & 0x0F)
 #define GET_LENGTH(n)     ((n >> 0)                 & 0xFF)
 
+#ifndef TEST_SONG
 void Song::load_from_sd(uint32_t *buff, int n) {
   n *= 2;
   uint8_t *buf = (uint8_t *) buff;
@@ -38,14 +39,26 @@ void Song::load_from_sd(uint32_t *buff, int n) {
     }
   }
 }
+#endif
 
  // Initialize module to a given song
 bool Song::init(const uint8_t n) {
   (void) n;
+#ifndef TEST_SONG
   if (!SD.begin()) return -1;
   if (!SD.exists("song")) return -1;
   song_file = SD.open("song");
   load_from_sd(song_notes, NOTE_BUFFER_SIZE);
+#else
+  song_notes[0] = 0x31235708;
+  song_notes[1] = 0x30235708;
+  song_notes[2] = 0x23245708;
+  song_notes[3] = 0x22245708;
+  song_notes[4] = 0x21245708;
+  song_notes[5] = 0x20245708;
+  song_notes[6] = 0x21245708;
+  song_notes[7] = 0x22245708;
+#endif
   return 0;
 }
 
@@ -74,6 +87,7 @@ uint8_t Song::advance_note(void) {
 
 // Update notes from SD card
 void Song::update(void) {
+#ifndef TEST_SONG
   if (curr_buffer == 0 && curr_note >= HALF_BUFFER_SIZE) {
     curr_buffer = 1;
     load_from_sd(song_notes, HALF_BUFFER_SIZE);
@@ -81,4 +95,5 @@ void Song::update(void) {
     curr_buffer = 0;
     load_from_sd(song_notes + HALF_BUFFER_SIZE, HALF_BUFFER_SIZE);
   }
+#endif
 }

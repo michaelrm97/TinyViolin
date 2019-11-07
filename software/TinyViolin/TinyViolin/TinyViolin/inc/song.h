@@ -9,6 +9,8 @@
 #ifndef SONG_H_
 #define SONG_H_
 
+#define TEST_SONG
+
 #include <Arduino.h>
 #include <SD.h>
 
@@ -31,9 +33,13 @@ class Song {
   void update();
  
  private:
+#ifndef TEST_SONG
   static const auto NOTE_BUFFER_SIZE = 64;
-  static const auto NUM_STRINGS = 5;
   static constexpr auto HALF_BUFFER_SIZE = (NOTE_BUFFER_SIZE << 1);
+#else
+  static const auto NOTE_BUFFER_SIZE = 8;
+#endif
+  static const auto NUM_STRINGS = 5;
 
   uint8_t open_notes[NUM_STRINGS] = {
     NOTE_G3, NOTE_D4, NOTE_A4, NOTE_E5, NOTE_B6
@@ -41,11 +47,12 @@ class Song {
 
   uint32_t song_notes[NOTE_BUFFER_SIZE];
   int curr_note = 0;
+#ifndef TEST_SONG
   int curr_buffer = 0;
-
   File song_file;
 
   void load_from_sd(uint32_t *buff, int n);
+#endif
 
 };
 
