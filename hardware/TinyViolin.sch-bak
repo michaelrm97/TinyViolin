@@ -14,7 +14,7 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Label 2300 6400 0    50   ~ 0
+Text Label 2300 6500 0    50   ~ 0
 PB1
 Text Label 2300 6300 0    50   ~ 0
 PB2
@@ -857,7 +857,7 @@ $EndComp
 Connection ~ 5650 2150
 Text Label 2300 6000 0    50   ~ 0
 LED3
-Text Label 2300 6500 0    50   ~ 0
+Text Label 2300 6400 0    50   ~ 0
 LED2
 Text Label 2300 6600 0    50   ~ 0
 LED1

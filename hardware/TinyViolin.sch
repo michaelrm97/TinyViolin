@@ -322,12 +322,8 @@ NoConn ~ 9550 4400
 NoConn ~ 9550 5100
 Text Label 9100 5000 2    50   ~ 0
 MISO
-Text Label 9100 4900 2    50   ~ 0
-GND
 Text Label 9100 4800 2    50   ~ 0
 SCK
-Text Label 9100 4700 2    50   ~ 0
-+3.3V
 Text Label 9100 4500 2    50   ~ 0
 SS
 Text Label 9100 4600 2    50   ~ 0
@@ -662,10 +658,6 @@ F 4 "5031821852" H 10000 5000 50  0001 C CNN "Part Number"
 $EndComp
 Wire Wire Line
 	9550 4400 9800 4400
-Wire Wire Line
-	9100 4700 9800 4700
-Wire Wire Line
-	9100 4900 9800 4900
 Wire Wire Line
 	9550 5100 9800 5100
 NoConn ~ 9800 5300
@@ -1027,4 +1019,30 @@ VBOOST
 Wire Wire Line
 	3300 2600 3650 2600
 NoConn ~ 9800 5600
+$Comp
+L power:GND #PWR?
+U 1 1 5DCB43D5
+P 8750 4900
+F 0 "#PWR?" H 8750 4650 50  0001 C CNN
+F 1 "GND" H 8755 4727 50  0000 C CNN
+F 2 "" H 8750 4900 50  0001 C CNN
+F 3 "" H 8750 4900 50  0001 C CNN
+	1    8750 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5DCB4722
+P 8750 4700
+F 0 "#PWR?" H 8750 4550 50  0001 C CNN
+F 1 "+3.3V" H 8765 4873 50  0000 C CNN
+F 2 "" H 8750 4700 50  0001 C CNN
+F 3 "" H 8750 4700 50  0001 C CNN
+	1    8750 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 4700 9800 4700
+Wire Wire Line
+	8750 4900 9800 4900
 $EndSCHEMATC
