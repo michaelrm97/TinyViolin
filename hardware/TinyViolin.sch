@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:TinyViolin-cache
-EELAYER 30 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -431,25 +431,25 @@ $EndComp
 $Comp
 L Device:R R3
 U 1 1 5DABDF08
-P 6250 2650
-F 0 "R3" H 6320 2696 50  0000 L CNN
-F 1 "220" H 6320 2605 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6180 2650 50  0001 C CNN
-F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 6250 2650 50  0001 C CNN
-F 4 "RNCP0805FTD150R" H 6250 2650 50  0001 C CNN "Part Number"
-	1    6250 2650
+P 6250 2300
+F 0 "R3" H 6320 2346 50  0000 L CNN
+F 1 "220" H 6320 2255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6180 2300 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 6250 2300 50  0001 C CNN
+F 4 "RMCF0805FT220R" H 6250 2300 50  0001 C CNN "Part Number"
+	1    6250 2300
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:LED D2
 U 1 1 5DABCDE0
-P 6250 2300
-F 0 "D2" V 6289 2183 50  0000 R CNN
-F 1 "LED" V 6198 2183 50  0000 R CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6250 2300 50  0001 C CNN
-F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-2493936/LG%20R971.pdf" H 6250 2300 50  0001 C CNN
-F 4 "LG R971-KN-1	" H 6250 2300 50  0001 C CNN "Part Number"
-	1    6250 2300
+P 6250 2650
+F 0 "D2" V 6289 2533 50  0000 R CNN
+F 1 "LED" V 6198 2533 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6250 2650 50  0001 C CNN
+F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-2493936/LG%20R971.pdf" H 6250 2650 50  0001 C CNN
+F 4 "LG R971-KN-1	" H 6250 2650 50  0001 C CNN "Part Number"
+	1    6250 2650
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -495,8 +495,8 @@ P 3400 3950
 F 0 "J1" H 3121 4046 50  0000 R CNN
 F 1 "ICSP" H 3121 3955 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" V 3150 4000 50  0001 C CNN
-F 3 "https://katalog.we-online.de/em/datasheet/6120xx21621.pdf" H 2125 3400 50  0001 C CNN
-F 4 "61200621621" H 3400 3950 50  0001 C CNN "Part Number"
+F 3 "~" H 2125 3400 50  0001 C CNN
+F 4 "~" H 3400 3950 50  0001 C CNN "Part Number"
 	1    3400 3950
 	1    0    0    -1  
 $EndComp
@@ -508,7 +508,7 @@ F 0 "R2" H 3420 5946 50  0000 L CNN
 F 1 "10k" H 3420 5855 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3280 5900 50  0001 C CNN
 F 3 "https://www.seielect.com/catalog/sei-rncp.pdf" H 3350 5900 50  0001 C CNN
-F 4 "RNCP0805FTD4R70" H 3350 5900 50  0001 C CNN "Part Number"
+F 4 "RNCP0805FTD10K0" H 3350 5900 50  0001 C CNN "Part Number"
 	1    3350 5900
 	1    0    0    -1  
 $EndComp
@@ -870,7 +870,7 @@ L Device:R R4
 U 1 1 5DCB6ADA
 P 4850 4800
 F 0 "R4" H 4920 4846 50  0000 L CNN
-F 1 "150" H 4920 4755 50  0000 L CNN
+F 1 "220" H 4920 4755 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4780 4800 50  0001 C CNN
 F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 4850 4800 50  0001 C CNN
 F 4 "RMCF0805FT220R" H 4850 4800 50  0001 C CNN "Part Number"
@@ -907,7 +907,7 @@ L Device:R R5
 U 1 1 5DCB8D3F
 P 5850 4800
 F 0 "R5" H 5920 4846 50  0000 L CNN
-F 1 "150" H 5920 4755 50  0000 L CNN
+F 1 "220" H 5920 4755 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5780 4800 50  0001 C CNN
 F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 5850 4800 50  0001 C CNN
 F 4 "RMCF0805FT220R" H 5850 4800 50  0001 C CNN "Part Number"
@@ -944,7 +944,7 @@ L Device:R R6
 U 1 1 5DCBA2B6
 P 6850 4800
 F 0 "R6" H 6920 4846 50  0000 L CNN
-F 1 "150" H 6920 4755 50  0000 L CNN
+F 1 "220" H 6920 4755 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6780 4800 50  0001 C CNN
 F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 6850 4800 50  0001 C CNN
 F 4 "RMCF0805FT220R" H 6850 4800 50  0001 C CNN "Part Number"
@@ -981,7 +981,7 @@ L Device:R R7
 U 1 1 5DCBBB31
 P 7850 4800
 F 0 "R7" H 7920 4846 50  0000 L CNN
-F 1 "150" H 7920 4755 50  0000 L CNN
+F 1 "220" H 7920 4755 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7780 4800 50  0001 C CNN
 F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 7850 4800 50  0001 C CNN
 F 4 "RMCF0805FT220R" H 7850 4800 50  0001 C CNN "Part Number"
@@ -1020,29 +1020,51 @@ Wire Wire Line
 	3300 2600 3650 2600
 NoConn ~ 9800 5600
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0125
 U 1 1 5DCB43D5
-P 8750 4900
-F 0 "#PWR?" H 8750 4650 50  0001 C CNN
-F 1 "GND" H 8755 4727 50  0000 C CNN
-F 2 "" H 8750 4900 50  0001 C CNN
-F 3 "" H 8750 4900 50  0001 C CNN
-	1    8750 4900
+P 8450 4950
+F 0 "#PWR0125" H 8450 4700 50  0001 C CNN
+F 1 "GND" H 8455 4777 50  0000 C CNN
+F 2 "" H 8450 4950 50  0001 C CNN
+F 3 "" H 8450 4950 50  0001 C CNN
+	1    8450 4950
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR?
+L power:+3.3V #PWR0126
 U 1 1 5DCB4722
-P 8750 4700
-F 0 "#PWR?" H 8750 4550 50  0001 C CNN
-F 1 "+3.3V" H 8765 4873 50  0000 C CNN
-F 2 "" H 8750 4700 50  0001 C CNN
-F 3 "" H 8750 4700 50  0001 C CNN
-	1    8750 4700
+P 8450 4650
+F 0 "#PWR0126" H 8450 4500 50  0001 C CNN
+F 1 "+3.3V" H 8465 4823 50  0000 C CNN
+F 2 "" H 8450 4650 50  0001 C CNN
+F 3 "" H 8450 4650 50  0001 C CNN
+	1    8450 4650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	8750 4700 9800 4700
 Wire Wire Line
 	8750 4900 9800 4900
+$Comp
+L Device:C C7
+U 1 1 5DCC2B84
+P 8450 4800
+F 0 "C7" H 8565 4846 50  0000 L CNN
+F 1 "100nF" H 8565 4755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8488 4650 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21B104JBCNNNC.jsp" H 8450 4800 50  0001 C CNN
+F 4 "CL21B104JBCNNNC" H 8450 4800 50  0001 C CNN "Part Number"
+	1    8450 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 4700 8750 4650
+Wire Wire Line
+	8750 4650 8450 4650
+Connection ~ 8450 4650
+Wire Wire Line
+	8450 4950 8750 4950
+Wire Wire Line
+	8750 4950 8750 4900
+Connection ~ 8450 4950
 $EndSCHEMATC
