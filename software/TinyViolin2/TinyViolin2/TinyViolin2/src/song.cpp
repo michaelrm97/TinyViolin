@@ -91,11 +91,10 @@ uint8_t Song::get_note(const uint8_t finger) {
 }
 
 // Get next note
-void Song::get_next_note(uint8_t *string, uint8_t *finger) {
+uint8_t Song::get_next_finger() {
   int next = curr_note + 1;
   if (next == NOTE_BUFFER_SIZE) next = 0;
-  *string = GET_STRING(song_notes[next]);
-  *finger = GET_FINGER(song_notes[next]);
+  return GET_FINGER(song_notes[next]);
 }
 
 // Advance to next note in song - return time to display

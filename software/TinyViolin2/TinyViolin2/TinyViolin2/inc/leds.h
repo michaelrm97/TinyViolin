@@ -13,17 +13,26 @@
 class Leds {
  public:
   void init() {
+    for (int i = 0; i < NUM_LEDS; i++) {
+      pinMode(led_pins[i], OUTPUT);
+    }
   }
 
   void display(const bool g, const bool d, const bool a, const bool e) {
+    digitalWrite(led_pins[0], g);
+    digitalWrite(led_pins[1], d);
+    digitalWrite(led_pins[2], a);
+    digitalWrite(led_pins[3], e);
   }
 
-  void display(const uint8_t string, const uint8_t finger) {
+  void display(const uint8_t finger) {
+    for (int i = 0; i < NUM_LEDS; i++) {
+      digitalWrite(led_pins[i], (i + 1) == finger);
+    }
   }
  private:
-  static const auto NUM_STRINGS = 5; // G, D, A, E, E+
-  static const auto NUM_FINGERS = 5; // Open, 1st, 2nd, 3rd, 4th
-
+  static const auto NUM_LEDS = 4;
+  uint8_t led_pins[NUM_LEDS] = {7, 5, 1, 0};
 };
 
 #endif /* LEDS_H_ */

@@ -19,7 +19,7 @@ class Buttons {
 
  private:
   static const auto NUM_BUTTONS = 4;
-  uint8_t button_pins[NUM_BUTTONS] = {0, 1, 2, 3};
+  uint8_t button_pins[NUM_BUTTONS] = {6, 4, 3, 2};
 };
 
 #endif /* BUTTONS_H_ */
