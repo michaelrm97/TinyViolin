@@ -18,16 +18,17 @@ Notes<MIC_PIN> notes;
 Pot<POT_PIN> pot;
 Song song;
 
-#define CROTCHET_PERIOD 80  // How long to wait before displaying next note
-                            // for a crotchet (half the expected time of
-                            // playing the note at 75bpm)
+#define SEMIQUAVER_PERIOD 40  // How long to wait before displaying next note
+                              // for a semi-quaver (75bpm)
 
 void setup() {
   buttons.init();
   leds.init();
   notes.init();
   pot.init();
+
   const auto pressed = buttons.get_all_pressed();
+
   if (song.init(pressed)) {
     leds.display(true, true, true, true);
     notes.play(NOTE_A4);
@@ -43,18 +44,22 @@ void loop() {
   static int8_t next_finger = -1;
   static uint16_t dur = 0;
 
-  if (next_finger == -1) next_finger = song.get_next_finger();
+  if (next_finger == -1) {
+    next_finger = song.get_next_finger();
+    leds.display(next_finger);
+  }
 
   const auto start = millis();
   const auto new_pot_status = pot.read();
   const auto new_button = buttons.get_pressed();
-  if (new_pot_status != pot_status || prev_button == new_button) {
+  if (new_pot_status != pot_status || prev_button != new_button) {
     // Change in status
     if (new_pot_status == POT_NONE) {
       notes.stop(); // Stop if not moving bow
+      leds.display(next_finger);
     } else { // Either changed bow or finger
       if (new_button == next_finger) { // Check whether to advance
-        dur = song.advance_note() * CROTCHET_PERIOD / 4;
+        dur = song.advance_note() * SEMIQUAVER_PERIOD;
         leds.display(next_finger);
         next_finger = song.get_next_finger();
       }

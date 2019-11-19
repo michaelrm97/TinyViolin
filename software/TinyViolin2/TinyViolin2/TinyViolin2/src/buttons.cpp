@@ -18,8 +18,8 @@ void Buttons::init(void) {
 
 // Return highest button that was pressed (1-4, 0 for no button pressed)
 uint8_t Buttons::get_pressed() {
-  for (int i = NUM_BUTTONS - 1; i >= 0; i++) {
-    if (digitalRead(button_pins[i])) {
+  for (int i = NUM_BUTTONS - 1; i >= 0; i--) {
+    if (!digitalRead(button_pins[i])) {
       return i + 1;
     }
   }
@@ -30,7 +30,7 @@ uint8_t Buttons::get_pressed() {
 uint8_t Buttons::get_all_pressed() {
   uint8_t num = 0;
   for (int i = 0; i < NUM_BUTTONS; i++) {
-    num = (num << 1) | digitalRead(button_pins[i]);
+    num = (num << 1) | !digitalRead(button_pins[i]);
   }
   return num;
 }

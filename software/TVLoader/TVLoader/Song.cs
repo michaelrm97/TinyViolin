@@ -16,7 +16,7 @@ namespace TVLoader
          internal byte note;
          internal byte finger;
          internal byte[] offsets;
-         internal byte length;
+         private byte length;
 
          internal byte Str { get; set; }
 
@@ -277,9 +277,10 @@ namespace TVLoader
                   } catch {
                      if (notes.Count > 0)
                      {
-                        notes[notes.Count - 1].addRest();
+                        Note lastNote = notes[notes.Count - 1];
+                        lastNote.addRest();
+                        notes[notes.Count - 1] = lastNote;
                      }
-                     prevString = -1;
                   }
                }
 
