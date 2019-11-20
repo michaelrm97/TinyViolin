@@ -2,7 +2,6 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:i="http://ns.adobe.com/AdobeIllustrator/10.0/"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -397,15 +396,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="70.704916"
-     inkscape:cx="403.05959"
-     inkscape:cy="597.81513"
+     inkscape:zoom="35.352458"
+     inkscape:cx="28.369245"
+     inkscape:cy="339.06435"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g1330"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
-     inkscape:window-x="1912"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      objecttolerance="10000"
@@ -428,7 +427,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -672,22 +671,6 @@
        id="rect837-1"
        sodipodi:nodetypes="ccccc" />
     <g
-       transform="matrix(0.26458333,0,0,0.26458333,22.312103,234.24306)"
-       i:dimmedPercent="50"
-       i:layer="yes"
-       i:rgbTrio="#4F008000FFFF"
-       id="Layer_1">
-      <g
-         id="g2071">
-        <path
-           style="clip-rule:evenodd;fill:#ffffff;fill-rule:evenodd"
-           inkscape:connector-curvature="0"
-           d="m 13.77,144.697 c 4.769,0 8.64,3.887 8.64,8.676 0,4.789 -3.871,8.678 -8.64,8.678 -4.77,0 -8.64,-3.889 -8.64,-8.678 0,-4.789 3.87,-8.676 8.64,-8.676"
-           i:knockout="Off"
-           id="path2027" />
-      </g>
-    </g>
-    <g
        id="g1330"
        transform="rotate(90,47.000119,157.99988)">
       <path
@@ -704,12 +687,12 @@
          inkscape:path-effect="#path-effect1004"
          inkscape:original-d="m 95.000238,198 v -1" />
       <rect
-         style="fill:none;fill-opacity:1;stroke:#ff00ff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:#ff00ff;stroke-width:0.09996463;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect1099"
-         width="1.2"
-         height="5"
-         x="-201"
-         y="97.000237"
+         width="1.0000354"
+         height="4.7000356"
+         x="-201.00034"
+         y="97.150536"
          transform="rotate(-90)" />
       <path
          style="fill:none;stroke:#00ffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
