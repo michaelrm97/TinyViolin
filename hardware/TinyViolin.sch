@@ -120,7 +120,7 @@ F 3 "" H 5200 2800 50  0001 C CNN
 $EndComp
 NoConn ~ 3650 2400
 NoConn ~ 3650 2200
-NoConn ~ 2650 2400
+NoConn ~ 2250 2500
 Text Label 3800 4050 0    50   ~ 0
 ~RST
 Text Label 2350 5700 0    50   ~ 0
@@ -269,12 +269,12 @@ MOSI
 $Comp
 L power:GND #PWR0121
 U 1 1 5DAA4917
-P 1450 2900
-F 0 "#PWR0121" H 1450 2650 50  0001 C CNN
-F 1 "GND" H 1455 2727 50  0000 C CNN
-F 2 "" H 1450 2900 50  0001 C CNN
-F 3 "" H 1450 2900 50  0001 C CNN
-	1    1450 2900
+P 1450 3200
+F 0 "#PWR0121" H 1450 2950 50  0001 C CNN
+F 1 "GND" H 1455 3027 50  0000 C CNN
+F 2 "" H 1450 3200 50  0001 C CNN
+F 3 "" H 1450 3200 50  0001 C CNN
+	1    1450 3200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -356,7 +356,7 @@ NoConn ~ 2300 5400
 NoConn ~ 2300 5500
 NoConn ~ 2300 5600
 Wire Wire Line
-	1450 2900 1100 2900
+	1450 3200 1100 3200
 $Comp
 L power:+3.3V #PWR0130
 U 1 1 5DA9A983
@@ -479,14 +479,14 @@ $EndComp
 $Comp
 L Switch:SW_SPDT SW1
 U 1 1 5DAA50F5
-P 2450 2500
-F 0 "SW1" H 2450 2785 50  0000 C CNN
-F 1 "SW_SPDT" H 2450 2694 50  0000 C CNN
-F 2 "MHS122:MHS122" H 2450 2500 50  0001 C CNN
-F 3 "https://media.digikey.com/pdf/Data%20Sheets/APEM%20Components%20PDFs/MHS_Series.PDF" H 2450 2500 50  0001 C CNN
-F 4 "MHS122" H 2450 2500 50  0001 C CNN "Part Number"
-	1    2450 2500
-	1    0    0    -1  
+P 2450 2600
+F 0 "SW1" H 2450 2885 50  0000 C CNN
+F 1 "SW_SPDT" H 2450 2794 50  0000 C CNN
+F 2 "MHS122:MHS122" H 2450 2600 50  0001 C CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/APEM%20Components%20PDFs/MHS_Series.PDF" H 2450 2600 50  0001 C CNN
+F 4 "MHS122" H 2450 2600 50  0001 C CNN "Part Number"
+	1    2450 2600
+	-1   0    0    1   
 $EndComp
 $Comp
 L Connector:AVR-ISP-6 J1
@@ -553,10 +553,10 @@ L Device:Crystal Y1
 U 1 1 5DA81CDA
 P 3000 4850
 F 0 "Y1" V 3046 4719 50  0000 R CNN
-F 1 "Crystal 16MHz" V 2955 4719 50  0000 R CNN
+F 1 "Crystal 8MHz" V 2955 4719 50  0000 R CNN
 F 2 "Crystal:Crystal_HC49-U_Vertical" H 3000 4850 50  0001 C CNN
 F 3 "https://abracon.com/Resonators/ABL.pdf" H 3000 4850 50  0001 C CNN
-F 4 "ABL-16.000MHZ-B2	" H 3000 4850 50  0001 C CNN "Part Number"
+F 4 "ABL-8.000MHZ-B2" H 3000 4850 50  0001 C CNN "Part Number"
 	1    3000 4850
 	0    -1   -1   0   
 $EndComp
@@ -623,25 +623,25 @@ $EndComp
 $Comp
 L Connector:TestPoint TP1
 U 1 1 5DB550E0
-P 1450 2500
-F 0 "TP1" H 1508 2618 50  0000 L CNN
-F 1 "VBT" H 1508 2527 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 1650 2500 50  0001 C CNN
-F 3 "~" H 1650 2500 50  0001 C CNN
-F 4 "~" H 1450 2500 50  0001 C CNN "Part Number"
-	1    1450 2500
+P 1450 2700
+F 0 "TP1" H 1508 2818 50  0000 L CNN
+F 1 "VBT" H 1508 2727 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 1650 2700 50  0001 C CNN
+F 3 "~" H 1650 2700 50  0001 C CNN
+F 4 "~" H 1450 2700 50  0001 C CNN "Part Number"
+	1    1450 2700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:TestPoint TP2
 U 1 1 5DB55599
-P 1100 2500
-F 0 "TP2" H 1158 2618 50  0000 L CNN
-F 1 "GND" H 1158 2527 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 1300 2500 50  0001 C CNN
-F 3 "~" H 1300 2500 50  0001 C CNN
-F 4 "~" H 1100 2500 50  0001 C CNN "Part Number"
-	1    1100 2500
+P 1100 2700
+F 0 "TP2" H 1158 2818 50  0000 L CNN
+F 1 "GND" H 1158 2727 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 1300 2700 50  0001 C CNN
+F 3 "~" H 1300 2700 50  0001 C CNN
+F 4 "~" H 1100 2700 50  0001 C CNN "Part Number"
+	1    1100 2700
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -709,32 +709,6 @@ Connection ~ 3350 6050
 Wire Wire Line
 	4450 6050 4450 6250
 Connection ~ 4450 6250
-$Comp
-L BAT-HLD-001-THM:BAT-HLD-001-THM BT1
-U 1 1 5DB41DC7
-P 1450 2700
-F 0 "BT1" V 1496 2567 50  0000 R CNN
-F 1 "BAT-HLD-001-THM" V 1405 2567 50  0000 R CNN
-F 2 "LINX_BAT-HLD-001-THM" H 1450 2700 50  0001 L BNN
-F 3 "https://linxtechnologies.com/wp/wp-content/uploads/bat-hld-001-thm.pdf" H 1450 2700 50  0001 L BNN
-F 4 "BAT-HLD-001-THM" H -250 1100 50  0001 C CNN "Part Number"
-	1    1450 2700
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	1700 3900 1800 3900
-Connection ~ 1700 3900
-$Comp
-L TinyViolin-rescue:ATmega328-PU-MCU_Microchip_ATmega U1
-U 1 1 5DB4AE2D
-P 1700 5400
-F 0 "U1" H 1300 3950 50  0000 R CNN
-F 1 "ATmega328-PU" H 2350 3950 50  0000 R CNN
-F 2 "Package_DIP:DIP-28_W7.62mm_LongPads" H 1700 5400 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 1700 5400 50  0001 C CNN
-	1    1700 5400
-	1    0    0    -1  
-$EndComp
 $Comp
 L Connector:Conn_01x01_Male H1
 U 1 1 5DB4E674
@@ -813,12 +787,8 @@ NoConn ~ 3200 7100
 NoConn ~ 3650 6600
 NoConn ~ 3650 6850
 NoConn ~ 3650 7100
-Connection ~ 1450 2900
 Wire Wire Line
-	1100 2500 1100 2900
-Wire Wire Line
-	2250 2500 1450 2500
-Connection ~ 1450 2500
+	2250 2700 1450 2700
 Wire Wire Line
 	9100 4600 9800 4600
 Wire Wire Line
@@ -831,7 +801,7 @@ Wire Wire Line
 	5650 5950 6050 5950
 Wire Wire Line
 	4850 5650 4850 5800
-Text Label 1750 2500 0    50   ~ 0
+Text Label 1750 2700 0    50   ~ 0
 BAT
 Text Label 2700 2600 0    50   ~ 0
 BAT1
@@ -1067,4 +1037,31 @@ Wire Wire Line
 Wire Wire Line
 	8750 4950 8750 4900
 Connection ~ 8450 4950
+$Comp
+L BCAAAPC:BCAAAPC BT1
+U 1 1 5DD563D0
+P 1450 3000
+F 0 "BT1" V 1354 3130 50  0000 L CNN
+F 1 "BCAAAPC" V 1445 3130 50  0000 L CNN
+F 2 "BAT_BCAAAPC" H 1450 3000 50  0001 L BNN
+F 3 "http://www.memoryprotectiondevices.com/datasheets/BCAAAPC-datasheet.pdf" H 1450 3000 50  0001 L BNN
+F 4 "BCAAAPC" H 1450 3000 50  0001 L BNN "Part Number"
+	1    1450 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1100 2700 1100 3200
+Connection ~ 1450 2700
+Connection ~ 1450 3200
+$Comp
+L MCU_Microchip_ATmega:ATmega328-PU U1
+U 1 1 5DD59E82
+P 1700 5400
+F 0 "U1" H 1900 3950 50  0000 R CNN
+F 1 "ATmega328-PU" H 2400 3850 50  0000 R CNN
+F 2 "Package_DIP:DIP-28_W7.62mm_LongPads" H 1700 5400 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 1700 5400 50  0001 C CNN
+	1    1700 5400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
