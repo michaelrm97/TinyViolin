@@ -495,8 +495,8 @@ P 3400 3950
 F 0 "J1" H 3121 4046 50  0000 R CNN
 F 1 "ICSP" H 3121 3955 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" V 3150 4000 50  0001 C CNN
-F 3 "~" H 2125 3400 50  0001 C CNN
-F 4 "~" H 3400 3950 50  0001 C CNN "Part Number"
+F 3 "https://cdn.harwin.com/pdfs/M20-998.pdf" H 2125 3400 50  0001 C CNN
+F 4 "M20-9980346" H 3400 3950 50  0001 C CNN "Part Number"
 	1    3400 3950
 	1    0    0    -1  
 $EndComp
