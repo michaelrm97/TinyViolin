@@ -22,7 +22,7 @@
          </DockPanel>
          <DockPanel Margin="0,20,4,0">
             <Button Name="loadButton" DockPanel.Dock="Right" Width="60px" Click="BtnLoad_OnClick" Margin="4,0,0,0" IsEnabled="False">Load</Button>
-            <Label Content="Load onto SD Card" Target="{Binding ElementName=loadButton}"/>
+            <Label Content="Songs must be placed in &quot;songs&quot; folder of SD Card" Target="{Binding ElementName=loadButton}"/>
          </DockPanel>
       </StackPanel>
    </Grid>

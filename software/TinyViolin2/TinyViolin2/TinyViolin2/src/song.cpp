@@ -18,16 +18,16 @@ SdFat SD;
  * Format of each note in song (4 bytes):
  * * string : 4 bits
  * * correct finger : 4 bits
- * * note offset : 4 bits each
- * * length : 8 bits (crotchet = 4, quaver = 2, semi-quaver = 1, inf = 0)
+ * * note offset : 3 bits each
+ * * length : 12 bits (length in 5ms intervals)
  */
 
-#define GET_STRING(n)     ((n >> 28)                & 0x0F)
-#define GET_FINGER(n)     ((n >> 24)                & 0x0F)
-#define GET_OFFSET(n, f)  ((n >> (24 - (f << 2)))   & 0x0F)
-#define GET_LENGTH(n)     ((n >> 0)                 & 0xFF)
+#define GET_STRING(n)     ((n >> 28)                & 0x00F)
+#define GET_FINGER(n)     ((n >> 24)                & 0x00F)
+#define GET_OFFSET(n, f)  ((n >> (24 - (f * 3)))    & 0x00F)
+#define GET_LENGTH(n)     ((n >> 0)                 & 0xFFF)
 
-// Do a bubble sort
+// Do a bubble sort so songs are in alphabetical order
 static void sort(String *names, int n) {
   for (int i = 0; i < n; i++) {
     bool unsorted = false;
@@ -65,13 +65,16 @@ void Song::load_from_sd(uint32_t *buff, uint16_t n) {
 
 // Initialize module to a given song
 bool Song::init(uint8_t n) {
+  // CHeck if SD card is there
   if (!SD.begin(10)) {
     return -1;
   }
+  // Open songs folder
   File dir = SD.open("songs");
   if (dir == NULL) {
     return -1;
   }
+  // Open up to 16 files and read their names into String array
   int i = 0;
   while (i < MAX_FILES) {
     File entry = dir.openNextFile();
@@ -82,17 +85,20 @@ bool Song::init(uint8_t n) {
     entry.close();
   }
   dir.close();
+  
+  if (num_files == 0) return -1;
+  
+  // Sort songs alphabetically
   sort(songs, num_files);
 
-  if (num_files == 0) return -1;
-
+  // Load nth song (last song if n > num_files)
   if (n > num_files) n = num_files - 1;
   
   song_file = SD.open("songs/" + songs[n]);
   if (song_file == NULL) return -1;
   curr_song = n;
-
   load_from_sd(song_notes, NOTE_BUFFER_SIZE);
+  
   return 0;
 }
 

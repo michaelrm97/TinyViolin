@@ -18,10 +18,8 @@ Notes<MIC_PIN> notes;
 Pot<POT_PIN> pot;
 Song song;
 
-#define SEMIQUAVER_PERIOD 40  // How long to wait before displaying next note
-                              // for a semi-quaver (75bpm)
-
 void setup() {
+  // Initialize all modules
   buttons.init();
   leds.init();
   notes.init();
@@ -30,6 +28,7 @@ void setup() {
   const auto pressed = buttons.get_all_pressed();
 
   if (song.init(pressed)) {
+    // Turn on all LEDs and play a beep on error
     leds.display(true, true, true, true);
     notes.play(NOTE_A4);
     delay(100);
@@ -44,14 +43,17 @@ void loop() {
   static int8_t next_finger = -1;
   static uint16_t dur = 0;
 
+  // Get first next finger
   if (next_finger == -1) {
     next_finger = song.get_next_finger();
     leds.display(next_finger);
   }
 
+  // Read pot and button status
   const auto start = millis();
   const auto new_pot_status = pot.read();
   const auto new_button = buttons.get_pressed();
+  
   if (new_pot_status != pot_status || prev_button != new_button) {
     // Change in status
     if (new_pot_status == POT_NONE) {
@@ -59,21 +61,27 @@ void loop() {
       leds.display(next_finger);
     } else { // Either changed bow or finger
       if (new_button == next_finger) { // Check whether to advance
-        dur = song.advance_note() * SEMIQUAVER_PERIOD;
+        dur = song.advance_note();
         leds.display(next_finger);
         next_finger = song.get_next_finger();
       }
       notes.play(song.get_note(new_button)); // Play note
     }
   }
+  
+  // Display next note to play once its time
+  // If dur is initially 0 the next note won't display until there's a rest
   if (dur > 0) {
     dur--;
     if (dur == 0) {
       leds.display(next_finger);
     }
   }
+  
+  // Update statuses
   pot_status = new_pot_status;
   prev_button = new_button;
   song.update();
-  while(millis() < start + 5);
+  
+  while(millis() < start + 5); // Sample every 5ms
 }

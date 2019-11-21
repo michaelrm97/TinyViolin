@@ -16,11 +16,11 @@ namespace TVLoader
          internal byte note;
          internal byte finger;
          internal byte[] offsets;
-         private byte length;
+         internal ushort length;
 
          internal byte Str { get; set; }
 
-         internal Note(byte _note, byte _str, byte _finger, byte[] _offsets, byte _length)
+         internal Note(byte _note, byte _str, byte _finger, byte[] _offsets, ushort _length)
          {
             note = _note;
             Str = _str;
@@ -36,7 +36,7 @@ namespace TVLoader
             bits |= (uint)(finger << 24);
             for (var i = 0; i < 4; i++)
             {
-               bits |= (uint)(offsets[i] << (20 - (i << 2)));
+               bits |= (uint)(offsets[i] << (21 - (i * 3)));
             }
             bits |= length;
             Debug.WriteLine("{7}: {0} {1} {2}{3}{4}{5} {6}", Str, finger, offsets[0], offsets[1], offsets[2], offsets[3], length, note);
@@ -136,7 +136,7 @@ namespace TVLoader
             return keyNotes;
          }
 
-         internal Note GetNote(byte n, byte length, ref int prevString)
+         internal Note GetNote(byte n, ushort length, ref int prevString)
          {
             byte[,] keyNotes = GetNotes();
             // Try and find n in key notes
@@ -265,15 +265,16 @@ namespace TVLoader
 
                // Create a chord out of currently played notes
                int dtime = ctime - ltime;
-               byte dur = (byte)Math.Round(4 * (double)dtime / division);
+               int dur = (int)Math.Round(4 * (double)dtime / division);
                Debug.WriteLine("ctime: {0} ltime: {1}", ctime, ltime);
                if (dur > 0)
                {
                   try
                   {
                      byte note = oldValues.Select((s, i) => new { i, s }).Where(t => t.s > 0).Select(t => (byte)t.i).Max();
-                     Debug.WriteLine(string.Format("Dur: {0} Note: {1}", dur, note));
-                     notes.Add(keySig.GetNote(note, dur, ref prevString));
+                     int len = dur * tempo / 10000;
+                     if (len > 4095) len = 4095;
+                     notes.Add(keySig.GetNote(note, (ushort)len, ref prevString));
                   } catch {
                      if (notes.Count > 0)
                      {
@@ -348,7 +349,9 @@ namespace TVLoader
                      Debug.WriteLine("End of track");
                      if (notes.Count > 0)
                      {
-                        notes[notes.Count - 1].addRest();
+                        Note lastNote = notes[notes.Count - 1];
+                        lastNote.addRest();
+                        notes[notes.Count - 1] = lastNote;
                      }
                      break;
                   case 0x51:
