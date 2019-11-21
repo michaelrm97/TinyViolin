@@ -269,12 +269,12 @@ MOSI
 $Comp
 L power:GND #PWR0121
 U 1 1 5DAA4917
-P 1450 3200
-F 0 "#PWR0121" H 1450 2950 50  0001 C CNN
-F 1 "GND" H 1455 3027 50  0000 C CNN
-F 2 "" H 1450 3200 50  0001 C CNN
-F 3 "" H 1450 3200 50  0001 C CNN
-	1    1450 3200
+P 1450 3100
+F 0 "#PWR0121" H 1450 2850 50  0001 C CNN
+F 1 "GND" H 1455 2927 50  0000 C CNN
+F 2 "" H 1450 3100 50  0001 C CNN
+F 3 "" H 1450 3100 50  0001 C CNN
+	1    1450 3100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -356,7 +356,7 @@ NoConn ~ 2300 5400
 NoConn ~ 2300 5500
 NoConn ~ 2300 5600
 Wire Wire Line
-	1450 3200 1100 3200
+	1450 3100 1100 3100
 $Comp
 L power:+3.3V #PWR0130
 U 1 1 5DA9A983
@@ -423,8 +423,8 @@ P 5200 2400
 F 0 "C5" H 5315 2446 50  0000 L CNN
 F 1 "22uF" H 5315 2355 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5238 2250 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21B224KBFNNNE.jsp" H 5200 2400 50  0001 C CNN
-F 4 "CL21B224KBFNNNE" H 5200 2400 50  0001 C CNN "Part Number"
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2019/05/10/19-CL21A226MPCLRNC.pdf" H 5200 2400 50  0001 C CNN
+F 4 "CL21A226MPCLRNC" H 5200 2400 50  0001 C CNN "Part Number"
 	1    5200 2400
 	1    0    0    -1  
 $EndComp
@@ -531,7 +531,7 @@ P 3700 5150
 F 0 "C2" H 3815 5196 50  0000 L CNN
 F 1 "22pF" H 3815 5105 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3738 5000 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21C220JBANNNC.jsp" H 3700 5150 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2019/06/18/CL21C220JBANNNC-19.pdf" H 3700 5150 50  0001 C CNN
 F 4 "CL21C220JBANNNC" H 3700 5150 50  0001 C CNN "Part Number"
 	1    3700 5150
 	1    0    0    -1  
@@ -543,7 +543,7 @@ P 3000 5150
 F 0 "C1" H 3115 5196 50  0000 L CNN
 F 1 "22pF" H 3115 5105 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3038 5000 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21C220JBANNNC.jsp" H 3000 5150 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2019/06/18/CL21C220JBANNNC-19.pdf" H 3000 5150 50  0001 C CNN
 F 4 "CL21C220JBANNNC" H 3000 5150 50  0001 C CNN "Part Number"
 	1    3000 5150
 	1    0    0    -1  
@@ -567,7 +567,7 @@ P 2400 3700
 F 0 "C3" H 2515 3746 50  0000 L CNN
 F 1 "100nF" H 2515 3655 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2438 3550 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21B104JBCNNNC.jsp" H 2400 3700 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2019/06/18/CL21B104JBCNNNC-19.pdf" H 2400 3700 50  0001 C CNN
 F 4 "CL21B104JBCNNNC" H 2400 3700 50  0001 C CNN "Part Number"
 	1    2400 3700
 	1    0    0    -1  
@@ -579,8 +579,8 @@ P 2800 2750
 F 0 "C4" H 2915 2796 50  0000 L CNN
 F 1 "22uF" H 2915 2705 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2838 2600 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21B224KBFNNNE.jsp" H 2800 2750 50  0001 C CNN
-F 4 "CL21B224KBFNNNE" H 2800 2750 50  0001 C CNN "Part Number"
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2019/05/10/19-CL21A226MPCLRNC.pdf" H 2800 2750 50  0001 C CNN
+F 4 "CL21A226MPCLRNC" H 2800 2750 50  0001 C CNN "Part Number"
 	1    2800 2750
 	1    0    0    -1  
 $EndComp
@@ -669,8 +669,8 @@ P 5650 2400
 F 0 "C6" H 5765 2446 50  0000 L CNN
 F 1 "22uF" H 5765 2355 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5688 2250 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21B224KBFNNNE.jsp" H 5650 2400 50  0001 C CNN
-F 4 "CL21B224KBFNNNE" H 5650 2400 50  0001 C CNN "Part Number"
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2019/05/10/19-CL21A226MPCLRNC.pdf" H 5650 2400 50  0001 C CNN
+F 4 "CL21A226MPCLRNC" H 5650 2400 50  0001 C CNN "Part Number"
 	1    5650 2400
 	1    0    0    -1  
 $EndComp
@@ -1022,7 +1022,7 @@ P 8450 4800
 F 0 "C7" H 8565 4846 50  0000 L CNN
 F 1 "100nF" H 8565 4755 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8488 4650 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21B104JBCNNNC.jsp" H 8450 4800 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2019/06/18/CL21B104JBCNNNC-19.pdf" H 8450 4800 50  0001 C CNN
 F 4 "CL21B104JBCNNNC" H 8450 4800 50  0001 C CNN "Part Number"
 	1    8450 4800
 	1    0    0    -1  
@@ -1037,30 +1037,32 @@ Wire Wire Line
 Wire Wire Line
 	8750 4950 8750 4900
 Connection ~ 8450 4950
-$Comp
-L BCAAAPC:BCAAAPC BT1
-U 1 1 5DD563D0
-P 1450 3000
-F 0 "BT1" V 1354 3130 50  0000 L CNN
-F 1 "BCAAAPC" V 1445 3130 50  0000 L CNN
-F 2 "BAT_BCAAAPC" H 1450 3000 50  0001 L BNN
-F 3 "http://www.memoryprotectiondevices.com/datasheets/BCAAAPC-datasheet.pdf" H 1450 3000 50  0001 L BNN
-F 4 "BCAAAPC" H 1450 3000 50  0001 L BNN "Part Number"
-	1    1450 3000
-	0    1    1    0   
-$EndComp
 Wire Wire Line
-	1100 2700 1100 3200
-Connection ~ 1450 2700
-Connection ~ 1450 3200
+	1100 2700 1100 3100
 $Comp
-L MCU_Microchip_ATmega:ATmega328-PU U1
-U 1 1 5DD59E82
+L Device:Battery BT1
+U 1 1 5DD60CD1
+P 1450 2900
+F 0 "BT1" H 1558 2946 50  0000 L CNN
+F 1 "AAA" H 1558 2855 50  0000 L CNN
+F 2 "2466:2466" V 1450 2960 50  0001 C CNN
+F 3 "http://keyelco.com/userAssets/file/M65p28.pdf" V 1450 2960 50  0001 C CNN
+F 4 "2466" H -500 -100 50  0001 C CNN "Part Number"
+	1    1450 2900
+	1    0    0    -1  
+$EndComp
+Connection ~ 1450 2700
+Connection ~ 1450 3100
+NoConn ~ 1800 3900
+$Comp
+L MCU_Microchip_ATmega:ATmega328P-PU U1
+U 1 1 5DD6647C
 P 1700 5400
 F 0 "U1" H 1900 3950 50  0000 R CNN
-F 1 "ATmega328-PU" H 2400 3850 50  0000 R CNN
+F 1 "ATmega328P-PU" H 2450 3850 50  0000 R CNN
 F 2 "Package_DIP:DIP-28_W7.62mm_LongPads" H 1700 5400 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 1700 5400 50  0001 C CNN
+F 4 "ATMEGA328P-PU" H 1700 5400 50  0001 C CNN "Part Number"
 	1    1700 5400
 	1    0    0    -1  
 $EndComp

@@ -6,5 +6,5 @@
   (lib (name MHS122)(type KiCad)(uri ${KIPRJMOD}/MHS122.pretty)(options "")(descr ""))
   (lib (name D6)(type KiCad)(uri ${KIPRJMOD}/D6.pretty)(options "")(descr ""))
   (lib (name SP-1605)(type KiCad)(uri ${KIPRJMOD}/SP-1605.pretty)(options "")(descr ""))
-  (lib (name BCAAAPC)(type Legacy)(uri ${KIPRJMOD}/BCAAAPC.mod)(options "")(descr ""))
+  (lib (name 2466)(type KiCad)(uri ${KIPRJMOD}/2466.pretty)(options "")(descr ""))
 )
