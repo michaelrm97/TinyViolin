@@ -24,19 +24,15 @@ SdFat SD;
 
 #define GET_STRING(n)     ((n >> 28)                & 0x00F)
 #define GET_FINGER(n)     ((n >> 24)                & 0x00F)
-#define GET_OFFSET(n, f)  ((n >> (24 - (f * 3)))    & 0x00F)
+#define GET_OFFSET(n, f)  ((n >> (24 - (f * 3)))    & 0x007)
 #define GET_LENGTH(n)     ((n >> 0)                 & 0xFFF)
 
 // Do a bubble sort so songs are in alphabetical order
-static void sort(String *names, int n) {
-  for (int i = 0; i < n; i++) {
+static void sort(String names[], int n) {
+  while (1) {
     bool unsorted = false;
     for (int j = 0; j < n - 1; j++) {
-      String a = names[j];
-      String b = names[j + 1];
-      a.toLowerCase();
-      b.toLowerCase();
-      if (a > b) {
+      if (names[j] > names[j + 1]) {
         String tmp = names[j + 1];
         names[j + 1] = names[j];
         names[j] = tmp;
@@ -55,6 +51,7 @@ void Song::load_from_sd(uint32_t *buff, uint16_t n) {
     if (c == -1) {
       song_file.close();
       curr_song++;
+      if (curr_song == num_files) curr_song = 0;
       song_file = SD.open("songs/" + songs[curr_song]);
     } else {
       *buf++ = c;
@@ -75,8 +72,7 @@ bool Song::init(uint8_t n) {
     return -1;
   }
   // Open up to 16 files and read their names into String array
-  int i = 0;
-  while (i < MAX_FILES) {
+  while (num_files < MAX_FILES) {
     File entry = dir.openNextFile();
     if (entry == NULL) break;
     char name[MAX_FILE_NAME + 1];
@@ -92,7 +88,7 @@ bool Song::init(uint8_t n) {
   sort(songs, num_files);
 
   // Load nth song (last song if n > num_files)
-  if (n > num_files) n = num_files - 1;
+  if (n >= num_files) n = num_files - 1;
   
   song_file = SD.open("songs/" + songs[n]);
   if (song_file == NULL) return -1;

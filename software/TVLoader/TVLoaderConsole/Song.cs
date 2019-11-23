@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace TVLoader
+namespace TVLoaderConsole
 {
    class Song
    {
@@ -224,7 +224,7 @@ namespace TVLoader
          if (mthd != "MThd" || headerLength != 6)
          {
             br.Close();
-            throw new FileFormatException();
+            throw new Exception();
          }
 
          // Only read first chunk
@@ -238,7 +238,7 @@ namespace TVLoader
          if (mtrk != "MTrk")
          {
             br.Close();
-            throw new FileFormatException();
+            throw new Exception();
          }
 
          byte[] chunk = br.ReadBytes(chunkLength);

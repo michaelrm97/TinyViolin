@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <ApplicationIcon>note.ico</ApplicationIcon>
+  </PropertyGroup>
+
+   <PropertyGroup>
+      <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+      <PublishSingleFile>true</PublishSingleFile>
+   </PropertyGroup>
+
+   <PropertyGroup>
+      <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+      <PublishSingleFile>true</PublishSingleFile>
+   </PropertyGroup>
+
+</Project>

@@ -31,15 +31,14 @@ class Song {
   void update();
  
  private:
-  static const auto NOTE_BUFFER_SIZE = 16;
+  static const auto NOTE_BUFFER_SIZE = 8;
   static constexpr auto HALF_BUFFER_SIZE = (NOTE_BUFFER_SIZE >> 1);
   static const auto NUM_STRINGS = 5;
   static const auto MAX_FILES = 16;
   static const auto MAX_FILE_NAME = 15;
-  static const auto MAX_PATH_NAME = 21;
 
   uint8_t open_notes[NUM_STRINGS] = {
-    NOTE_G3, NOTE_D4, NOTE_A4, NOTE_E5, NOTE_B6
+    NOTE_G3, NOTE_D4, NOTE_A4, NOTE_E5, NOTE_B5
   };
 
   uint32_t song_notes[NOTE_BUFFER_SIZE];
