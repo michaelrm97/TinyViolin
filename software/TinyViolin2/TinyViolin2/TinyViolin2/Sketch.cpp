@@ -31,9 +31,16 @@ void setup() {
     // Turn on all LEDs and play a beep on error
     leds.display(true, true, true, true);
     notes.play(NOTE_A4);
-    delay(100);
-    notes.stop();
-    while(1);
+    int i = 0;
+    while(1) {
+      const auto start = micros();
+      leds.update();
+      if (i < 100) {
+        i++;
+        if (i == 100) notes.stop();
+      }
+      while(micros() < start + 1000); // Loop once a second
+    }    
   }
 }
 
