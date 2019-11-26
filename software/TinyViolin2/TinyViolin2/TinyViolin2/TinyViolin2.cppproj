@@ -57,7 +57,7 @@
   <avrgcc.compiler.symbols.DefSymbols>
     <ListValues>
       <Value>NDEBUG</Value>
-      <Value>F_CPU=16000000L</Value>
+      <Value>F_CPU=8000000L</Value>
       <Value>ARDUINO=10809</Value>
       <Value>ARDUINO_AVR_UNO</Value>
       <Value>ARDUINO_ARCH_AVR</Value>
@@ -92,7 +92,7 @@
   <avrgcccpp.compiler.symbols.DefSymbols>
     <ListValues>
       <Value>NDEBUG</Value>
-      <Value>F_CPU=16000000L</Value>
+      <Value>F_CPU=8000000L</Value>
       <Value>ARDUINO=10809</Value>
       <Value>ARDUINO_AVR_UNO</Value>
       <Value>ARDUINO_ARCH_AVR</Value>

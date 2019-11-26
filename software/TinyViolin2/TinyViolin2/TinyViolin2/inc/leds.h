@@ -19,10 +19,10 @@ class Leds {
   }
 
   void display(const bool g, const bool d, const bool a, const bool e) {
-    status[0] = g;
-    status[0] = d;
-    status[0] = a;
-    status[0] = e;
+    digitalWrite(led_pins[0], g);
+    digitalWrite(led_pins[1], d);
+    digitalWrite(led_pins[2], a);
+    digitalWrite(led_pins[3], e);
   }
 
   void display(const uint8_t finger) {
