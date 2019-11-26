@@ -42,6 +42,7 @@ void loop() {
   static int8_t prev_button = -1;
   static int8_t next_finger = -1;
   static uint16_t dur = 0;
+  static uint16_t ttl;
 
   // Get first next finger
   if (next_finger == -1) {
@@ -60,15 +61,20 @@ void loop() {
       notes.stop(); // Stop if not moving bow
       if (dur == 0) leds.display(next_finger);
     } else { // Either changed bow or finger
-      if (new_button == next_finger) { // Check whether to advance
+      if (ttl == 0 && new_button == next_finger) { // Check whether to advance
         dur = song.advance_note();
         leds.display(next_finger);
         next_finger = song.get_next_finger();
+        if (new_button == next_finger) ttl = 100;
       }
       notes.play(song.get_note(new_button)); // Play note
     }
   }
   
+  if (ttl > 0) {
+    ttl--;
+  }
+
   // Display next note to play once its time
   // If dur is initially 0 the next note won't display until there's a rest
   if (dur > 0) {

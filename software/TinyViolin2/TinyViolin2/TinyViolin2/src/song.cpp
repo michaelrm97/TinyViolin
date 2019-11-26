@@ -104,7 +104,7 @@ uint8_t Song::get_note(const uint8_t finger) {
   const auto string = GET_STRING(song_notes[curr]);
   if (finger == 0) return open_notes[string];
   else return open_notes[string] + 
-      GET_OFFSET(song_notes[curr], finger);
+      GET_OFFSET(song_notes[curr], finger) + 1;
 }
 
 // Get next note

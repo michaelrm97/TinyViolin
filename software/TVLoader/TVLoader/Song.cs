@@ -35,7 +35,7 @@ namespace TVLoader
             bits |= (uint)(finger << 24);
             for (var i = 0; i < 4; i++)
             {
-               bits |= (uint)(offsets[i] << (21 - (i * 3)));
+               bits |= (uint)((offsets[i] - 1) << (21 - (i * 3)));
             }
             bits |= length;
             Debug.WriteLine("{7}: {0} {1} {2}{3}{4}{5} {6}", Str, finger, offsets[0], offsets[1], offsets[2], offsets[3], length, note);
