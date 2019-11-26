@@ -49,17 +49,16 @@ class Pot {
     }
   }
  private:
-  static const auto NUM_DIFFS = 32;
-  static constexpr auto THRESH = 2.5;
-  static constexpr auto LOWER_THRESH = 0.25;
+  static const auto NUM_DIFFS = 128;
+  static constexpr auto THRESH = 0.5;
+  static constexpr auto LOWER_THRESH = 0.05;
 
-  int i = 0;
+  uint16_t i = 0;
   int prev = -1;
-  int diffs[NUM_DIFFS];
+  int8_t diffs[NUM_DIFFS];
   int diff_avg = 0;
   pot_status_t prev_status = POT_NONE;
 
 };
-
 
 #endif /* POT_H_ */

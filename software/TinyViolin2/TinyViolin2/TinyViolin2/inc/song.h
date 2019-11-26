@@ -26,7 +26,7 @@ class Song {
   uint8_t get_next_finger();
 
   // Advance to next note in song - return time to display
-  uint8_t advance_note();
+  uint16_t advance_note();
 
   void update();
  

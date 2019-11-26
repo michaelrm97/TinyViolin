@@ -115,7 +115,7 @@ uint8_t Song::get_next_finger() {
 }
 
 // Advance to next note in song - return time to display
-uint8_t Song::advance_note(void) {
+uint16_t Song::advance_note(void) {
   curr_note++;
   if (curr_note == NOTE_BUFFER_SIZE) curr_note = 0;
   return GET_LENGTH(song_notes[curr_note]);

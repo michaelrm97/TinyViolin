@@ -50,7 +50,7 @@ void loop() {
   }
 
   // Read pot and button status
-  const auto start = millis();
+  const auto start = micros();
   const auto new_pot_status = pot.read();
   const auto new_button = buttons.get_pressed();
   
@@ -58,7 +58,7 @@ void loop() {
     // Change in status
     if (new_pot_status == POT_NONE) {
       notes.stop(); // Stop if not moving bow
-      leds.display(next_finger);
+      if (dur == 0) leds.display(next_finger);
     } else { // Either changed bow or finger
       if (new_button == next_finger) { // Check whether to advance
         dur = song.advance_note();
@@ -82,6 +82,7 @@ void loop() {
   pot_status = new_pot_status;
   prev_button = new_button;
   song.update();
+  leds.update();
   
-  while(millis() < start + 5); // Sample every 5ms
+  while(micros() < start + 1000); // Sample every 1ms
 }

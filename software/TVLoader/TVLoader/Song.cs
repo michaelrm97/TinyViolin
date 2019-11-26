@@ -276,7 +276,7 @@ namespace TVLoader
                   try
                   {
                      byte note = oldValues.Select((s, i) => new { i, s }).Where(t => t.s > 0).Select(t => (byte)t.i).Max();
-                     int len = dur * tempo / 120000;
+                     int len = dur * tempo / 24000;
                      if (len > 4095) len = 4095;
                      notes.Add(keySig.GetNote(note, (ushort)len, ref prevString));
                   } catch {
