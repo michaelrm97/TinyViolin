@@ -72,7 +72,7 @@ void loop() {
         dur = song.advance_note();
         leds.display(next_finger);
         next_finger = song.get_next_finger();
-        if (new_button == next_finger) ttl = 100;
+        if (new_button == next_finger) ttl = 250;
       }
       notes.play(song.get_note(new_button)); // Play note
     }

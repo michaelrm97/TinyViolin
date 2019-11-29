@@ -49,7 +49,7 @@ class Pot {
     }
   }
  private:
-  static const auto NUM_DIFFS = 128;
+  static const auto NUM_DIFFS = 64;
   static constexpr auto THRESH = 0.5;
   static constexpr auto LOWER_THRESH = 0.05;
 
